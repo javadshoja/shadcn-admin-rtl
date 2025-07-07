@@ -109,7 +109,7 @@ export function AccountForm() {
                     <Button
                       variant={'outline'}
                       className={cn(
-                        'w-[240px] pr-3 text-left font-normal',
+                        'w-[240px] pr-3 text-right font-normal',
                         !field.value && 'text-muted-foreground'
                       )}
                     >

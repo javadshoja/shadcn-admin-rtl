@@ -120,7 +120,7 @@ export default function Chats() {
                     <button
                       type='button'
                       className={cn(
-                        `hover:bg-secondary/75 -mx-1 flex w-full rounded-md px-2 py-2 text-left text-sm`,
+                        `hover:bg-secondary/75 -mx-1 flex w-full rounded-md px-2 py-2 text-right text-sm`,
                         selectedUser?.id === id && 'sm:bg-muted'
                       )}
                       onClick={() => {
@@ -237,7 +237,7 @@ export default function Chats() {
                                 <span
                                   className={cn(
                                     'text-muted-foreground mt-1 block text-xs font-light italic',
-                                    msg.sender === 'You' && 'text-right'
+                                    msg.sender === 'You' && 'text-left'
                                   )}
                                 >
                                   {format(msg.timestamp, 'h:mm a')}

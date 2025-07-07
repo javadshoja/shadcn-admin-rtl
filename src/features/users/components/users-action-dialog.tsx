@@ -134,7 +134,7 @@ export function UsersActionDialog({ currentRow, open, onOpenChange }: Props) {
       }}
     >
       <DialogContent className='sm:max-w-lg'>
-        <DialogHeader className='text-left'>
+        <DialogHeader className='text-right'>
           <DialogTitle>{isEdit ? 'Edit User' : 'Add New User'}</DialogTitle>
           <DialogDescription>
             {isEdit ? 'Update the user here. ' : 'Create new user here. '}
@@ -153,7 +153,7 @@ export function UsersActionDialog({ currentRow, open, onOpenChange }: Props) {
                 name='firstName'
                 render={({ field }) => (
                   <FormItem className='grid grid-cols-6 items-center space-y-0 gap-x-4 gap-y-1'>
-                    <FormLabel className='col-span-2 text-right'>
+                    <FormLabel className='col-span-2 text-left'>
                       First Name
                     </FormLabel>
                     <FormControl>
@@ -173,7 +173,7 @@ export function UsersActionDialog({ currentRow, open, onOpenChange }: Props) {
                 name='lastName'
                 render={({ field }) => (
                   <FormItem className='grid grid-cols-6 items-center space-y-0 gap-x-4 gap-y-1'>
-                    <FormLabel className='col-span-2 text-right'>
+                    <FormLabel className='col-span-2 text-left'>
                       Last Name
                     </FormLabel>
                     <FormControl>
@@ -193,7 +193,7 @@ export function UsersActionDialog({ currentRow, open, onOpenChange }: Props) {
                 name='username'
                 render={({ field }) => (
                   <FormItem className='grid grid-cols-6 items-center space-y-0 gap-x-4 gap-y-1'>
-                    <FormLabel className='col-span-2 text-right'>
+                    <FormLabel className='col-span-2 text-left'>
                       Username
                     </FormLabel>
                     <FormControl>
@@ -212,7 +212,7 @@ export function UsersActionDialog({ currentRow, open, onOpenChange }: Props) {
                 name='email'
                 render={({ field }) => (
                   <FormItem className='grid grid-cols-6 items-center space-y-0 gap-x-4 gap-y-1'>
-                    <FormLabel className='col-span-2 text-right'>
+                    <FormLabel className='col-span-2 text-left'>
                       Email
                     </FormLabel>
                     <FormControl>
@@ -231,7 +231,7 @@ export function UsersActionDialog({ currentRow, open, onOpenChange }: Props) {
                 name='phoneNumber'
                 render={({ field }) => (
                   <FormItem className='grid grid-cols-6 items-center space-y-0 gap-x-4 gap-y-1'>
-                    <FormLabel className='col-span-2 text-right'>
+                    <FormLabel className='col-span-2 text-left'>
                       Phone Number
                     </FormLabel>
                     <FormControl>
@@ -250,7 +250,7 @@ export function UsersActionDialog({ currentRow, open, onOpenChange }: Props) {
                 name='role'
                 render={({ field }) => (
                   <FormItem className='grid grid-cols-6 items-center space-y-0 gap-x-4 gap-y-1'>
-                    <FormLabel className='col-span-2 text-right'>
+                    <FormLabel className='col-span-2 text-left'>
                       Role
                     </FormLabel>
                     <SelectDropdown
@@ -272,7 +272,7 @@ export function UsersActionDialog({ currentRow, open, onOpenChange }: Props) {
                 name='password'
                 render={({ field }) => (
                   <FormItem className='grid grid-cols-6 items-center space-y-0 gap-x-4 gap-y-1'>
-                    <FormLabel className='col-span-2 text-right'>
+                    <FormLabel className='col-span-2 text-left'>
                       Password
                     </FormLabel>
                     <FormControl>
@@ -291,7 +291,7 @@ export function UsersActionDialog({ currentRow, open, onOpenChange }: Props) {
                 name='confirmPassword'
                 render={({ field }) => (
                   <FormItem className='grid grid-cols-6 items-center space-y-0 gap-x-4 gap-y-1'>
-                    <FormLabel className='col-span-2 text-right'>
+                    <FormLabel className='col-span-2 text-left'>
                       Confirm Password
                     </FormLabel>
                     <FormControl>
