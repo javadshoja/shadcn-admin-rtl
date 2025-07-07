@@ -118,7 +118,7 @@ export function AccountForm() {
                       ) : (
                         <span>Pick a date</span>
                       )}
-                      <CalendarIcon className='mr-auto h-4 w-4 opacity-50' />
+                      <CalendarIcon className='ml-auto h-4 w-4 opacity-50' />
                     </Button>
                   </FormControl>
                 </PopoverTrigger>
@@ -162,7 +162,7 @@ export function AccountForm() {
                             (language) => language.value === field.value
                           )?.label
                         : 'Select language'}
-                      <CaretSortIcon className='ml-2 h-4 w-4 shrink-0 opacity-50' />
+                      <CaretSortIcon className='mr-2 h-4 w-4 shrink-0 opacity-50' />
                     </Button>
                   </FormControl>
                 </PopoverTrigger>
@@ -182,7 +182,7 @@ export function AccountForm() {
                           >
                             <CheckIcon
                               className={cn(
-                                'mr-2 h-4 w-4',
+                                'ml-2 h-4 w-4',
                                 language.value === field.value
                                   ? 'opacity-100'
                                   : 'opacity-0'

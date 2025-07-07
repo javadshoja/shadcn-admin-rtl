@@ -67,7 +67,7 @@ export default function Chats() {
       {/* ===== Top Heading ===== */}
       <Header>
         <Search />
-        <div className='mr-auto flex items-center space-x-4'>
+        <div className='ml-auto flex items-center space-x-4'>
           <ThemeSwitch />
           <ProfileDropdown />
         </div>
@@ -95,7 +95,7 @@ export default function Chats() {
               </div>
 
               <label className='border-input focus-within:ring-ring flex h-12 w-full items-center space-x-0 rounded-md border pl-2 focus-within:ring-1 focus-within:outline-hidden'>
-                <IconSearch size={15} className='mr-2 stroke-slate-500' />
+                <IconSearch size={15} className='ml-2 stroke-slate-500' />
                 <span className='sr-only'>Search</span>
                 <input
                   type='text'
@@ -165,7 +165,7 @@ export default function Chats() {
                   <Button
                     size='icon'
                     variant='ghost'
-                    className='-ml-2 h-full sm:hidden'
+                    className='-mr-2 h-full sm:hidden'
                     onClick={() => setMobileSelectedUser(null)}
                   >
                     <IconArrowLeft />
@@ -190,7 +190,7 @@ export default function Chats() {
                 </div>
 
                 {/* Right */}
-                <div className='-mr-1 flex items-center gap-1 lg:gap-2'>
+                <div className='-ml-1 flex items-center gap-1 lg:gap-2'>
                   <Button
                     size='icon'
                     variant='ghost'
@@ -218,7 +218,7 @@ export default function Chats() {
               {/* Conversation */}
               <div className='flex flex-1 flex-col gap-2 rounded-md px-4 pt-0 pb-4'>
                 <div className='flex size-full flex-1'>
-                  <div className='chat-text-container relative -mr-4 flex flex-1 flex-col overflow-y-hidden'>
+                  <div className='chat-text-container relative -ml-4 flex flex-1 flex-col overflow-y-hidden'>
                     <div className='chat-flex flex h-40 w-full grow flex-col-reverse justify-start gap-4 overflow-y-auto py-2 pr-4 pb-4'>
                       {currentMessage &&
                         Object.keys(currentMessage).map((key) => (

@@ -50,7 +50,7 @@ function UserManagement() {
         <UsersProvider>
           <Header fixed>
             <Search />
-            <div className='mr-auto flex items-center space-x-4'>
+            <div className='ml-auto flex items-center space-x-4'>
               <ThemeSwitch />
               <UserButton />
             </div>

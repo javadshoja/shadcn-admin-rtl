@@ -24,7 +24,7 @@ export function Search({ className = '', placeholder = 'Search' }: Props) {
         <span className='text-xs'>⌘</span>K
       </kbd>
 
-      <span className='ml-3'>{placeholder}</span>
+      <span className='mr-3'>{placeholder}</span>
       
 <IconSearch
         aria-hidden='true'

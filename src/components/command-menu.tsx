@@ -52,7 +52,7 @@ export function CommandMenu() {
                         runCommand(() => navigate({ to: navItem.url }))
                       }}
                     >
-                      <div className='mr-2 flex h-4 w-4 items-center justify-center'>
+                      <div className='ml-2 flex h-4 w-4 items-center justify-center'>
                         <IconArrowRightDashed className='text-muted-foreground/80 size-2' />
                       </div>
                       {navItem.title}
@@ -67,7 +67,7 @@ export function CommandMenu() {
                       runCommand(() => navigate({ to: subItem.url }))
                     }}
                   >
-                    <div className='mr-2 flex h-4 w-4 items-center justify-center'>
+                    <div className='ml-2 flex h-4 w-4 items-center justify-center'>
                       <IconArrowRightDashed className='text-muted-foreground/80 size-2' />
                     </div>
                     {navItem.title} <IconChevronRight /> {subItem.title}
