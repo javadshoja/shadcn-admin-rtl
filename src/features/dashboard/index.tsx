@@ -42,8 +42,8 @@ export default function Dashboard() {
           defaultValue='overview'
           className='space-y-4'
         >
-          <div className='w-full overflow-x-auto pb-2'>
-            <TabsList>
+          <div className='w-full overflow-x-auto pb-2' dir='rtl'>
+            <TabsList >
               <TabsTrigger value='overview'>Overview</TabsTrigger>
               <TabsTrigger value='analytics' disabled>
                 Analytics
