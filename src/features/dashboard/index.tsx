@@ -165,7 +165,7 @@ export default function Dashboard() {
                 <CardHeader>
                   <CardTitle>Overview</CardTitle>
                 </CardHeader>
-                <CardContent className='pl-2'>
+                <CardContent className='pr-2'>
                   <Overview />
                 </CardContent>
               </Card>

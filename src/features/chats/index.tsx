@@ -94,7 +94,7 @@ export default function Chats() {
                 </Button>
               </div>
 
-              <label className='border-input focus-within:ring-ring flex h-12 w-full items-center space-x-0 rounded-md border pl-2 focus-within:ring-1 focus-within:outline-hidden'>
+              <label className='border-input focus-within:ring-ring flex h-12 w-full items-center space-x-0 rounded-md border pr-2 focus-within:ring-1 focus-within:outline-hidden'>
                 <IconSearch size={15} className='ml-2 stroke-slate-500' />
                 <span className='sr-only'>Search</span>
                 <input
@@ -219,7 +219,7 @@ export default function Chats() {
               <div className='flex flex-1 flex-col gap-2 rounded-md px-4 pt-0 pb-4'>
                 <div className='flex size-full flex-1'>
                   <div className='chat-text-container relative -ml-4 flex flex-1 flex-col overflow-y-hidden'>
-                    <div className='chat-flex flex h-40 w-full grow flex-col-reverse justify-start gap-4 overflow-y-auto py-2 pr-4 pb-4'>
+                    <div className='chat-flex flex h-40 w-full grow flex-col-reverse justify-start gap-4 overflow-y-auto py-2 pl-4 pb-4'>
                       {currentMessage &&
                         Object.keys(currentMessage).map((key) => (
                           <Fragment key={key}>
