@@ -20,14 +20,15 @@ export function Search({ className = '', placeholder = 'Search' }: Props) {
       )}
       onClick={() => setOpen(true)}
     >
-      
-      <kbd className='bg-muted pointer-events-none absolute top-[0.3rem] right-[0.3rem] hidden h-5 items-center gap-1 rounded border px-1.5 font-mono text-[10px] font-medium opacity-100 select-none sm:flex'>
+      <kbd className='bg-muted pointer-events-none absolute top-[0.3rem] left-[0.3rem] hidden h-5 items-center gap-1 rounded border px-1.5 font-mono text-[10px] font-medium opacity-100 select-none sm:flex'>
         <span className='text-xs'>⌘</span>K
       </kbd>
+
       <span className='ml-3'>{placeholder}</span>
+      
 <IconSearch
         aria-hidden='true'
-        className='absolute top-1/2 left-1.5 -translate-y-1/2'
+        className='absolute top-1/2 right-1.5 -translate-y-1/2'
       />
     </Button>
   )
