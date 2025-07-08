@@ -32,9 +32,9 @@ export default function Dashboard() {
       {/* ===== Main ===== */}
       <Main>
         <div className='mb-2 flex items-center justify-between space-y-2'>
-          <h1 className='text-2xl font-bold tracking-tight'>Dashboard</h1>
+          <h1 className='text-2xl font-bold tracking-tight'>داشبورد</h1>
           <div className='flex items-center space-x-2'>
-            <Button>Download</Button>
+            <Button>دانلود</Button>
           </div>
         </div>
         <Tabs
@@ -44,15 +44,15 @@ export default function Dashboard() {
         >
           <div className='w-full overflow-x-auto pb-2' dir='rtl'>
             <TabsList >
-              <TabsTrigger value='overview'>Overview</TabsTrigger>
+              <TabsTrigger value='overview'>خلاصه</TabsTrigger>
               <TabsTrigger value='analytics' disabled>
-                Analytics
+                  آنالیز
               </TabsTrigger>
               <TabsTrigger value='reports' disabled>
-                Reports
+                گزارشات
               </TabsTrigger>
               <TabsTrigger value='notifications' disabled>
-                Notifications
+                هشدارها
               </TabsTrigger>
             </TabsList>
           </div>
@@ -61,7 +61,7 @@ export default function Dashboard() {
               <Card>
                 <CardHeader className='flex flex-row items-center justify-between space-y-0 pb-2'>
                   <CardTitle className='text-sm font-medium'>
-                    Total Revenue
+                    درآمد کل
                   </CardTitle>
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
@@ -79,14 +79,14 @@ export default function Dashboard() {
                 <CardContent>
                   <div className='text-2xl font-bold'>$45,231.89</div>
                   <p className='text-muted-foreground text-xs'>
-                    +20.1% from last month
+                    +20.1% از ماه گذشته
                   </p>
                 </CardContent>
               </Card>
               <Card>
                 <CardHeader className='flex flex-row items-center justify-between space-y-0 pb-2'>
                   <CardTitle className='text-sm font-medium'>
-                    Subscriptions
+                    اشتراک ها
                   </CardTitle>
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
@@ -106,13 +106,13 @@ export default function Dashboard() {
                 <CardContent>
                   <div className='text-2xl font-bold'>+2350</div>
                   <p className='text-muted-foreground text-xs'>
-                    +180.1% from last month
+                    +180.1% از ماه گذشته
                   </p>
                 </CardContent>
               </Card>
               <Card>
                 <CardHeader className='flex flex-row items-center justify-between space-y-0 pb-2'>
-                  <CardTitle className='text-sm font-medium'>Sales</CardTitle>
+                  <CardTitle className='text-sm font-medium'>فروش</CardTitle>
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
                     viewBox='0 0 24 24'
@@ -130,14 +130,14 @@ export default function Dashboard() {
                 <CardContent>
                   <div className='text-2xl font-bold'>+12,234</div>
                   <p className='text-muted-foreground text-xs'>
-                    +19% from last month
+                    +19% از ماه گذشته
                   </p>
                 </CardContent>
               </Card>
               <Card>
                 <CardHeader className='flex flex-row items-center justify-between space-y-0 pb-2'>
                   <CardTitle className='text-sm font-medium'>
-                    Active Now
+                    فعال حالا
                   </CardTitle>
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
@@ -155,7 +155,7 @@ export default function Dashboard() {
                 <CardContent>
                   <div className='text-2xl font-bold'>+573</div>
                   <p className='text-muted-foreground text-xs'>
-                    +201 since last hour
+                    +201 در ساعت گذشته
                   </p>
                 </CardContent>
               </Card>
@@ -163,7 +163,7 @@ export default function Dashboard() {
             <div className='grid grid-cols-1 gap-4 lg:grid-cols-7'>
               <Card className='col-span-1 lg:col-span-4'>
                 <CardHeader>
-                  <CardTitle>Overview</CardTitle>
+                  <CardTitle>خلاصه</CardTitle>
                 </CardHeader>
                 <CardContent className='pr-2'>
                   <Overview />
@@ -171,9 +171,9 @@ export default function Dashboard() {
               </Card>
               <Card className='col-span-1 lg:col-span-3'>
                 <CardHeader>
-                  <CardTitle>Recent Sales</CardTitle>
+                  <CardTitle>آخرین فروش ها</CardTitle>
                   <CardDescription>
-                    You made 265 sales this month.
+                    شما 265 فروش در این ماه داشتید.
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
