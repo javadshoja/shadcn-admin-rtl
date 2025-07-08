@@ -77,7 +77,7 @@ export function NavUser({
             <DropdownMenuGroup>
               <DropdownMenuItem>
                 <Sparkles />
-                Upgrade to Pro
+                ارتقا به اشتراک حرفه‌ای
               </DropdownMenuItem>
             </DropdownMenuGroup>
             <DropdownMenuSeparator />
@@ -85,26 +85,26 @@ export function NavUser({
               <DropdownMenuItem asChild>
                 <Link to='/settings/account'>
                   <BadgeCheck />
-                  Account
+                  حساب کاربری
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
                 <Link to='/settings'>
                   <CreditCard />
-                  Billing
+                  پرداخت
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
                 <Link to='/settings/notifications'>
                   <Bell />
-                  Notifications
+                  هشدارها
                 </Link>
               </DropdownMenuItem>
             </DropdownMenuGroup>
             <DropdownMenuSeparator />
             <DropdownMenuItem>
               <LogOut />
-              Log out
+              خروج
             </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
