@@ -38,8 +38,8 @@ export function TeamSwitcher({
               className='data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground'
             >
               <ChevronsUpDown className='mr-auto' />
-              
-              <div className='grid flex-1 text-right text-sm leading-tight' >
+
+              <div className='grid flex-1 text-right text-sm leading-tight'>
                 <span className='truncate font-semibold'>
                   {activeTeam.name}
                 </span>
@@ -78,7 +78,9 @@ export function TeamSwitcher({
               <div className='bg-background flex size-6 items-center justify-center rounded-md border'>
                 <Plus className='size-4' />
               </div>
-              <div className='text-muted-foreground font-medium'>افزودن تیم</div>
+              <div className='text-muted-foreground font-medium'>
+                افزودن تیم
+              </div>
             </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>

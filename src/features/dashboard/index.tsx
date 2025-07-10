@@ -43,10 +43,10 @@ export default function Dashboard() {
           className='space-y-4'
         >
           <div className='w-full overflow-x-auto pb-2' dir='rtl'>
-            <TabsList >
+            <TabsList>
               <TabsTrigger value='overview'>خلاصه</TabsTrigger>
               <TabsTrigger value='analytics' disabled>
-                  آنالیز
+                آنالیز
               </TabsTrigger>
               <TabsTrigger value='reports' disabled>
                 گزارشات
