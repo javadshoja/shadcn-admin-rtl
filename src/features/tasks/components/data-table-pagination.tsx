@@ -63,7 +63,7 @@ export function DataTablePagination<TData>({
             disabled={!table.getCanPreviousPage()}
           >
             <span className='sr-only'>رفتن به صفحه اول</span>
-            <DoubleArrowLeftIcon className='h-4 w-4' />
+            <DoubleArrowRightIcon className='h-4 w-4' />
           </Button>
           <Button
             variant='outline'
@@ -72,7 +72,7 @@ export function DataTablePagination<TData>({
             disabled={!table.getCanPreviousPage()}
           >
             <span className='sr-only'>رفتن به صفحه قبل</span>
-            <ChevronLeftIcon className='h-4 w-4' />
+            <ChevronRightIcon className='h-4 w-4' />
           </Button>
           <Button
             variant='outline'
@@ -81,7 +81,7 @@ export function DataTablePagination<TData>({
             disabled={!table.getCanNextPage()}
           >
             <span className='sr-only'>رفتن به صفحه بعد</span>
-            <ChevronRightIcon className='h-4 w-4' />
+            <ChevronLeftIcon className='h-4 w-4' />
           </Button>
           <Button
             variant='outline'
@@ -90,7 +90,7 @@ export function DataTablePagination<TData>({
             disabled={!table.getCanNextPage()}
           >
             <span className='sr-only'>رفتن به صفحه آخر</span>
-            <DoubleArrowRightIcon className='h-4 w-4' />
+            <DoubleArrowLeftIcon className='h-4 w-4' />
           </Button>
         </div>
       </div>
