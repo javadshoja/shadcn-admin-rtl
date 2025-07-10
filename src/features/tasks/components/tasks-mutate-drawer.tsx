@@ -32,10 +32,10 @@ interface Props {
 }
 
 const formSchema = z.object({
-  title: z.string().min(1, 'Title is required.'),
-  status: z.string().min(1, 'Please select a status.'),
-  label: z.string().min(1, 'Please select a label.'),
-  priority: z.string().min(1, 'Please choose a priority.'),
+  title: z.string().min(1, 'عنوان الزامی است.'),
+  status: z.string().min(1, 'لطفاً وضعیت را انتخاب کنید.'),
+  label: z.string().min(1, 'لطفاً برچسب را انتخاب کنید.'),
+  priority: z.string().min(1, 'لطفاً اولویت را انتخاب کنید.'),
 })
 type TasksForm = z.infer<typeof formSchema>
 
@@ -69,12 +69,12 @@ export function TasksMutateDrawer({ open, onOpenChange, currentRow }: Props) {
     >
       <SheetContent className='flex flex-col'>
         <SheetHeader className='text-right'>
-          <SheetTitle>{isUpdate ? 'Update' : 'Create'} Task</SheetTitle>
+          <SheetTitle>{isUpdate ? 'بروزرسانی' : 'ایجاد'} وظیفه</SheetTitle>
           <SheetDescription>
             {isUpdate
-              ? 'Update the task by providing necessary info.'
-              : 'Add a new task by providing necessary info.'}
-            Click save when you&apos;re done.
+              ? 'وظیفه را با ارائه اطلاعات لازم بروزرسانی کنید.'
+              : 'وظیفه جدیدی را با ارائه اطلاعات لازم اضافه کنید.'}
+            پس از اتمام، ذخیره را کلیک کنید.
           </SheetDescription>
         </SheetHeader>
         <Form {...form}>
@@ -88,9 +88,9 @@ export function TasksMutateDrawer({ open, onOpenChange, currentRow }: Props) {
               name='title'
               render={({ field }) => (
                 <FormItem className='space-y-1'>
-                  <FormLabel>Title</FormLabel>
+                  <FormLabel>عنوان</FormLabel>
                   <FormControl>
-                    <Input {...field} placeholder='Enter a title' />
+                    <Input {...field} placeholder='عنوان را وارد کنید' />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -101,17 +101,17 @@ export function TasksMutateDrawer({ open, onOpenChange, currentRow }: Props) {
               name='status'
               render={({ field }) => (
                 <FormItem className='space-y-1'>
-                  <FormLabel>Status</FormLabel>
+                  <FormLabel>وضعیت</FormLabel>
                   <SelectDropdown
                     defaultValue={field.value}
                     onValueChange={field.onChange}
-                    placeholder='Select dropdown'
+                    placeholder='انتخاب کنید'
                     items={[
-                      { label: 'In Progress', value: 'in progress' },
-                      { label: 'Backlog', value: 'backlog' },
-                      { label: 'Todo', value: 'todo' },
-                      { label: 'Canceled', value: 'canceled' },
-                      { label: 'Done', value: 'done' },
+                      { label: 'در حال انجام', value: 'in progress' },
+                      { label: 'لیست انتظار', value: 'backlog' },
+                      { label: 'انجام نشده', value: 'todo' },
+                      { label: 'لغو شده', value: 'canceled' },
+                      { label: 'انجام شده', value: 'done' },
                     ]}
                   />
                   <FormMessage />
@@ -123,7 +123,7 @@ export function TasksMutateDrawer({ open, onOpenChange, currentRow }: Props) {
               name='label'
               render={({ field }) => (
                 <FormItem className='relative space-y-3'>
-                  <FormLabel>Label</FormLabel>
+                  <FormLabel>برچسب</FormLabel>
                   <FormControl>
                     <RadioGroup
                       onValueChange={field.onChange}
@@ -134,21 +134,19 @@ export function TasksMutateDrawer({ open, onOpenChange, currentRow }: Props) {
                         <FormControl>
                           <RadioGroupItem value='documentation' />
                         </FormControl>
-                        <FormLabel className='font-normal'>
-                          Documentation
-                        </FormLabel>
+                        <FormLabel className='font-normal'>مستندات</FormLabel>
                       </FormItem>
                       <FormItem className='flex items-center space-y-0 space-x-3'>
                         <FormControl>
                           <RadioGroupItem value='feature' />
                         </FormControl>
-                        <FormLabel className='font-normal'>Feature</FormLabel>
+                        <FormLabel className='font-normal'>ویژگی</FormLabel>
                       </FormItem>
                       <FormItem className='flex items-center space-y-0 space-x-3'>
                         <FormControl>
                           <RadioGroupItem value='bug' />
                         </FormControl>
-                        <FormLabel className='font-normal'>Bug</FormLabel>
+                        <FormLabel className='font-normal'>خطا</FormLabel>
                       </FormItem>
                     </RadioGroup>
                   </FormControl>
@@ -161,7 +159,7 @@ export function TasksMutateDrawer({ open, onOpenChange, currentRow }: Props) {
               name='priority'
               render={({ field }) => (
                 <FormItem className='relative space-y-3'>
-                  <FormLabel>Priority</FormLabel>
+                  <FormLabel>اولویت</FormLabel>
                   <FormControl>
                     <RadioGroup
                       onValueChange={field.onChange}
@@ -172,19 +170,19 @@ export function TasksMutateDrawer({ open, onOpenChange, currentRow }: Props) {
                         <FormControl>
                           <RadioGroupItem value='high' />
                         </FormControl>
-                        <FormLabel className='font-normal'>High</FormLabel>
+                        <FormLabel className='font-normal'>زیاد</FormLabel>
                       </FormItem>
                       <FormItem className='flex items-center space-y-0 space-x-3'>
                         <FormControl>
                           <RadioGroupItem value='medium' />
                         </FormControl>
-                        <FormLabel className='font-normal'>Medium</FormLabel>
+                        <FormLabel className='font-normal'>متوسط</FormLabel>
                       </FormItem>
                       <FormItem className='flex items-center space-y-0 space-x-3'>
                         <FormControl>
                           <RadioGroupItem value='low' />
                         </FormControl>
-                        <FormLabel className='font-normal'>Low</FormLabel>
+                        <FormLabel className='font-normal'>کم</FormLabel>
                       </FormItem>
                     </RadioGroup>
                   </FormControl>
@@ -196,10 +194,10 @@ export function TasksMutateDrawer({ open, onOpenChange, currentRow }: Props) {
         </Form>
         <SheetFooter className='gap-2'>
           <SheetClose asChild>
-            <Button variant='outline'>Close</Button>
+            <Button variant='outline'>بستن</Button>
           </SheetClose>
           <Button form='tasks-form' type='submit'>
-            Save changes
+            ذخیره تغییرات
           </Button>
         </SheetFooter>
       </SheetContent>

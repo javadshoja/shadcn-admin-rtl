@@ -11,10 +11,10 @@ export function TasksPrimaryButtons() {
         className='space-x-1'
         onClick={() => setOpen('import')}
       >
-        <span>Import</span> <IconDownload size={18} />
+        <span>وارد کردن</span> <IconDownload size={18} />
       </Button>
       <Button className='space-x-1' onClick={() => setOpen('create')}>
-        <span>Create</span> <IconPlus size={18} />
+        <span>ایجاد</span> <IconPlus size={18} />
       </Button>
     </div>
   )
