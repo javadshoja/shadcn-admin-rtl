@@ -33,6 +33,7 @@ export const columns: ColumnDef<Task>[] = [
   },
   {
     accessorKey: 'id',
+    id: 'id',
     header: ({ column }) => (
       <DataTableColumnHeader column={column} title='وظیفه' />
     ),
@@ -42,6 +43,10 @@ export const columns: ColumnDef<Task>[] = [
   },
   {
     accessorKey: 'title',
+    id: 'title',
+    meta: {
+      title: 'عنوان',
+    },
     header: ({ column }) => (
       <DataTableColumnHeader column={column} title='عنوان' />
     ),
@@ -60,6 +65,10 @@ export const columns: ColumnDef<Task>[] = [
   },
   {
     accessorKey: 'status',
+    id: 'status',
+    meta: {
+      title: 'وضعیت',
+    },
     header: ({ column }) => (
       <DataTableColumnHeader column={column} title='وضعیت' />
     ),
@@ -87,6 +96,10 @@ export const columns: ColumnDef<Task>[] = [
   },
   {
     accessorKey: 'priority',
+    id: 'priority',
+    meta: {
+      title: 'اولویت',
+    },
     header: ({ column }) => (
       <DataTableColumnHeader column={column} title='اولویت' />
     ),

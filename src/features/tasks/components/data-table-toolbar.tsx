@@ -1,18 +1,20 @@
 import { Cross2Icon } from '@radix-ui/react-icons'
-import { Table } from '@tanstack/react-table'
+import { ColumnDef, Table } from '@tanstack/react-table'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { DataTableViewOptions } from '../components/data-table-view-options'
 import { priorities, statuses } from '../data/data'
 import { DataTableFacetedFilter } from './data-table-faceted-filter'
 
-interface DataTableToolbarProps<TData> {
+interface DataTableToolbarProps<TData, TValue> {
   table: Table<TData>
+  columns: ColumnDef<TData, TValue>[]
 }
 
-export function DataTableToolbar<TData>({
+export function DataTableToolbar<TData, TValue>({
   table,
-}: DataTableToolbarProps<TData>) {
+  columns,
+}: DataTableToolbarProps<TData, TValue>) {
   const isFiltered = table.getState().columnFilters.length > 0
 
   return (
@@ -53,7 +55,7 @@ export function DataTableToolbar<TData>({
           </Button>
         )}
       </div>
-      <DataTableViewOptions table={table} />
+      <DataTableViewOptions table={table} columns={columns} />
     </div>
   )
 }
