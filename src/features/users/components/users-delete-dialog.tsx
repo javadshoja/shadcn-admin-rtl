@@ -37,40 +37,40 @@ export function UsersDeleteDialog({ open, onOpenChange, currentRow }: Props) {
             className='stroke-destructive ml-1 inline-block'
             size={18}
           />{' '}
-          Delete User
+          حذف کاربر
         </span>
       }
       desc={
         <div className='space-y-4'>
           <p className='mb-2'>
-            Are you sure you want to delete{' '}
-            <span className='font-bold'>{currentRow.username}</span>?
+            آیا از حذف{' '}
+            <span className='font-bold'>{currentRow.username}</span> مطمئن هستید؟
             <br />
-            This action will permanently remove the user with the role of{' '}
+            این عمل کاربر با نقش{' '}
             <span className='font-bold'>
               {currentRow.role.toUpperCase()}
             </span>{' '}
-            from the system. This cannot be undone.
+            را برای همیشه از سیستم حذف خواهد کرد. این عمل قابل بازگشت نیست.
           </p>
 
           <Label className='my-2'>
-            Username:
+            نام کاربری:
             <Input
               value={value}
               onChange={(e) => setValue(e.target.value)}
-              placeholder='Enter username to confirm deletion.'
+              placeholder='برای تایید حذف، نام کاربری را وارد کنید.'
             />
           </Label>
 
           <Alert variant='destructive'>
-            <AlertTitle>Warning!</AlertTitle>
+            <AlertTitle>هشدار!</AlertTitle>
             <AlertDescription>
-              Please be carefull, this operation can not be rolled back.
+              لطفا دقت کنید، این عملیات قابل بازگشت نیست.
             </AlertDescription>
           </Alert>
         </div>
       }
-      confirmText='Delete'
+      confirmText='حذف'
       destructive
     />
   )

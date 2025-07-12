@@ -29,9 +29,9 @@ import { userTypes } from '../data/data'
 const formSchema = z.object({
   email: z
     .string()
-    .min(1, { message: 'Email is required.' })
-    .email({ message: 'Email is invalid.' }),
-  role: z.string().min(1, { message: 'Role is required.' }),
+    .min(1, { message: 'ایمیل الزامی است.' })
+    .email({ message: 'ایمیل نامعتبر است.' }),
+  role: z.string().min(1, { message: 'نقش الزامی است.' }),
   desc: z.string().optional(),
 })
 type UserInviteForm = z.infer<typeof formSchema>
@@ -64,11 +64,11 @@ export function UsersInviteDialog({ open, onOpenChange }: Props) {
       <DialogContent className='sm:max-w-md'>
         <DialogHeader className='text-right'>
           <DialogTitle className='flex items-center gap-2'>
-            <IconMailPlus /> Invite User
+            <IconMailPlus /> دعوت کاربر
           </DialogTitle>
           <DialogDescription>
-            Invite new user to join your team by sending them an email
-            invitation. Assign a role to define their access level.
+            کاربر جدید را با ارسال دعوت‌نامه ایمیلی به تیم خود دعوت کنید.
+            برای تعیین سطح دسترسی، یک نقش به آن‌ها اختصاص دهید.
           </DialogDescription>
         </DialogHeader>
         <Form {...form}>
@@ -82,11 +82,11 @@ export function UsersInviteDialog({ open, onOpenChange }: Props) {
               name='email'
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Email</FormLabel>
+                  <FormLabel>ایمیل</FormLabel>
                   <FormControl>
                     <Input
                       type='email'
-                      placeholder='eg: john.doe@gmail.com'
+                      placeholder='مثال: ali.mohammadi@gmail.com'
                       {...field}
                     />
                   </FormControl>
@@ -99,11 +99,11 @@ export function UsersInviteDialog({ open, onOpenChange }: Props) {
               name='role'
               render={({ field }) => (
                 <FormItem className='space-y-1'>
-                  <FormLabel>Role</FormLabel>
+                  <FormLabel>نقش</FormLabel>
                   <SelectDropdown
                     defaultValue={field.value}
                     onValueChange={field.onChange}
-                    placeholder='Select a role'
+                    placeholder='یک نقش انتخاب کنید'
                     items={userTypes.map(({ label, value }) => ({
                       label,
                       value,
@@ -118,11 +118,11 @@ export function UsersInviteDialog({ open, onOpenChange }: Props) {
               name='desc'
               render={({ field }) => (
                 <FormItem className=''>
-                  <FormLabel>Description (optional)</FormLabel>
+                  <FormLabel>توضیحات (اختیاری)</FormLabel>
                   <FormControl>
                     <Textarea
                       className='resize-none'
-                      placeholder='Add a personal note to your invitation (optional)'
+                      placeholder='یک یادداشت شخصی به دعوت‌نامه خود اضافه کنید (اختیاری)'
                       {...field}
                     />
                   </FormControl>
@@ -134,10 +134,10 @@ export function UsersInviteDialog({ open, onOpenChange }: Props) {
         </Form>
         <DialogFooter className='gap-y-2'>
           <DialogClose asChild>
-            <Button variant='outline'>Cancel</Button>
+            <Button variant='outline'>لغو</Button>
           </DialogClose>
           <Button type='submit' form='user-invite-form'>
-            Invite <IconSend />
+            دعوت <IconSend />
           </Button>
         </DialogFooter>
       </DialogContent>
