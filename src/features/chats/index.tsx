@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { Fragment } from 'react/jsx-runtime'
-import { format } from 'date-fns'
 import {
   IconArrowLeft,
   IconDotsVertical,
@@ -14,6 +13,7 @@ import {
   IconSend,
   IconVideo,
 } from '@tabler/icons-react'
+import { format } from 'date-fns-jalali'
 import { cn } from '@/lib/utils'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { Button } from '@/components/ui/button'
