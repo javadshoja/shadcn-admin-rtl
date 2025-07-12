@@ -28,21 +28,21 @@ const profileFormSchema = z.object({
   username: z
     .string()
     .min(2, {
-      message: 'Username must be at least 2 characters.',
+      message: 'نام کاربری باید حداقل ۲ کاراکتر باشد.',
     })
     .max(30, {
-      message: 'Username must not be longer than 30 characters.',
+      message: 'نام کاربری نباید بیشتر از ۳۰ کاراکتر باشد.',
     }),
   email: z
     .string({
-      required_error: 'Please select an email to display.',
+      required_error: 'لطفاً یک ایمیل برای نمایش انتخاب کنید.',
     })
     .email(),
   bio: z.string().max(160).min(4),
   urls: z
     .array(
       z.object({
-        value: z.string().url({ message: 'Please enter a valid URL.' }),
+        value: z.string().url({ message: 'لطفاً یک URL معتبر وارد کنید.' }),
       })
     )
     .optional(),
@@ -52,7 +52,7 @@ type ProfileFormValues = z.infer<typeof profileFormSchema>
 
 // This can come from your database or API.
 const defaultValues: Partial<ProfileFormValues> = {
-  bio: 'I own a computer.',
+  bio: 'من یک کامپیوتر دارم.',
   urls: [
     { value: 'https://shadcn.com' },
     { value: 'http://twitter.com/shadcn' },
@@ -82,13 +82,14 @@ export default function ProfileForm() {
           name='username'
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Username</FormLabel>
+              <FormLabel>نام کاربری</FormLabel>
               <FormControl>
-                <Input placeholder='shadcn' {...field} />
+                <Input placeholder='علی محمدی' {...field} />
               </FormControl>
               <FormDescription>
-                This is your public display name. It can be your real name or a
-                pseudonym. You can only change this once every 30 days.
+                این نام نمایشی عمومی شماست. می‌تواند نام واقعی شما یا یک نام
+                مستعار باشد. شما فقط هر ۳۰ روز یک بار می‌توانید این را تغییر
+                دهید.
               </FormDescription>
               <FormMessage />
             </FormItem>
@@ -99,22 +100,22 @@ export default function ProfileForm() {
           name='email'
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Email</FormLabel>
+              <FormLabel>ایمیل</FormLabel>
               <Select onValueChange={field.onChange} defaultValue={field.value}>
                 <FormControl>
                   <SelectTrigger>
-                    <SelectValue placeholder='Select a verified email to display' />
+                    <SelectValue placeholder='یک ایمیل تأیید شده برای نمایش انتخاب کنید' />
                   </SelectTrigger>
                 </FormControl>
-                <SelectContent>
+                <SelectContent dir='rtl'>
                   <SelectItem value='m@example.com'>m@example.com</SelectItem>
                   <SelectItem value='m@google.com'>m@google.com</SelectItem>
                   <SelectItem value='m@support.com'>m@support.com</SelectItem>
                 </SelectContent>
               </Select>
               <FormDescription>
-                You can manage verified email addresses in your{' '}
-                <Link to='/'>email settings</Link>.
+                می‌توانید آدرس‌های ایمیل تأیید شده خود را در{' '}
+                <Link to='/'>تنظیمات ایمیل</Link>.
               </FormDescription>
               <FormMessage />
             </FormItem>
@@ -125,17 +126,17 @@ export default function ProfileForm() {
           name='bio'
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Bio</FormLabel>
+              <FormLabel>بیوگرافی</FormLabel>
               <FormControl>
                 <Textarea
-                  placeholder='Tell us a little bit about yourself'
+                  placeholder='کمی درباره خودتان به ما بگویید'
                   className='resize-none'
                   {...field}
                 />
               </FormControl>
               <FormDescription>
-                You can <span>@mention</span> other users and organizations to
-                link to them.
+                می‌توانید با <span>@اشاره</span> به کاربران و سازمان‌های دیگر،
+                به آن‌ها لینک دهید.
               </FormDescription>
               <FormMessage />
             </FormItem>
@@ -150,10 +151,11 @@ export default function ProfileForm() {
               render={({ field }) => (
                 <FormItem>
                   <FormLabel className={cn(index !== 0 && 'sr-only')}>
-                    URLs
+                    آدرس‌ها
                   </FormLabel>
                   <FormDescription className={cn(index !== 0 && 'sr-only')}>
-                    Add links to your website, blog, or social media profiles.
+                    لینک‌های وب‌سایت، وبلاگ یا پروفایل‌های شبکه‌های اجتماعی خود
+                    را اضافه کنید.
                   </FormDescription>
                   <FormControl>
                     <Input {...field} />
@@ -170,10 +172,10 @@ export default function ProfileForm() {
             className='mt-2'
             onClick={() => append({ value: '' })}
           >
-            Add URL
+            افزودن URL
           </Button>
         </div>
-        <Button type='submit'>Update profile</Button>
+        <Button type='submit'>به‌روزرسانی پروفایل</Button>
       </form>
     </Form>
   )

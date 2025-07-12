@@ -29,10 +29,10 @@ export default function Settings() {
       <Main fixed>
         <div className='space-y-0.5'>
           <h1 className='text-2xl font-bold tracking-tight md:text-3xl'>
-            Settings
+            تنظیمات
           </h1>
           <p className='text-muted-foreground'>
-            Manage your account settings and set e-mail preferences.
+            تنظیمات حساب کاربری خود را مدیریت کرده و اولویت‌های ایمیل را تنظیم کنید.
           </p>
         </div>
         <Separator className='my-4 lg:my-6' />
@@ -51,27 +51,27 @@ export default function Settings() {
 
 const sidebarNavItems = [
   {
-    title: 'Profile',
+    title: 'پروفایل',
     icon: <IconUser size={18} />,
     href: '/settings',
   },
   {
-    title: 'Account',
+    title: 'حساب کاربری',
     icon: <IconTool size={18} />,
     href: '/settings/account',
   },
   {
-    title: 'Appearance',
+    title: 'ظاهر',
     icon: <IconPalette size={18} />,
     href: '/settings/appearance',
   },
   {
-    title: 'Notifications',
+    title: 'اعلان‌ها',
     icon: <IconNotification size={18} />,
     href: '/settings/notifications',
   },
   {
-    title: 'Display',
+    title: 'نمایش',
     icon: <IconBrowserCheck size={18} />,
     href: '/settings/display',
   },

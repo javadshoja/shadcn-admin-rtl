@@ -21,11 +21,11 @@ import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group'
 
 const appearanceFormSchema = z.object({
   theme: z.enum(['light', 'dark'], {
-    required_error: 'Please select a theme.',
+    required_error: 'لطفاً یک تم را انتخاب کنید.',
   }),
   font: z.enum(fonts, {
-    invalid_type_error: 'Select a font',
-    required_error: 'Please select a font.',
+    invalid_type_error: 'یک فونت را انتخاب کنید',
+    required_error: 'لطفاً یک فونت را انتخاب کنید.',
   }),
 })
 
@@ -61,7 +61,7 @@ export function AppearanceForm() {
           name='font'
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Font</FormLabel>
+              <FormLabel>فونت</FormLabel>
               <div className='relative w-max'>
                 <FormControl>
                   <select
@@ -82,7 +82,7 @@ export function AppearanceForm() {
                 <ChevronDownIcon className='absolute top-2.5 left-3 h-4 w-4 opacity-50' />
               </div>
               <FormDescription className='font-manrope'>
-                Set the font you want to use in the dashboard.
+                فونت مورد نظر خود را برای استفاده در داشبورد تنظیم کنید.
               </FormDescription>
               <FormMessage />
             </FormItem>
@@ -93,9 +93,9 @@ export function AppearanceForm() {
           name='theme'
           render={({ field }) => (
             <FormItem className='space-y-1'>
-              <FormLabel>Theme</FormLabel>
+              <FormLabel>تم</FormLabel>
               <FormDescription>
-                Select the theme for the dashboard.
+                تم داشبورد را انتخاب کنید.
               </FormDescription>
               <FormMessage />
               <RadioGroup
@@ -125,7 +125,7 @@ export function AppearanceForm() {
                       </div>
                     </div>
                     <span className='block w-full p-2 text-center font-normal'>
-                      Light
+                      روشن
                     </span>
                   </FormLabel>
                 </FormItem>
@@ -151,7 +151,7 @@ export function AppearanceForm() {
                       </div>
                     </div>
                     <span className='block w-full p-2 text-center font-normal'>
-                      Dark
+                      تیره
                     </span>
                   </FormLabel>
                 </FormItem>
@@ -160,7 +160,7 @@ export function AppearanceForm() {
           )}
         />
 
-        <Button type='submit'>Update preferences</Button>
+        <Button type='submit'>به‌روزرسانی تنظیمات</Button>
       </form>
     </Form>
   )

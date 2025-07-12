@@ -17,33 +17,33 @@ import {
 const items = [
   {
     id: 'recents',
-    label: 'Recents',
+    label: 'اخیر',
   },
   {
     id: 'home',
-    label: 'Home',
+    label: 'خانه',
   },
   {
     id: 'applications',
-    label: 'Applications',
+    label: 'برنامه‌ها',
   },
   {
     id: 'desktop',
-    label: 'Desktop',
+    label: 'دسکتاپ',
   },
   {
     id: 'downloads',
-    label: 'Downloads',
+    label: 'دانلودها',
   },
   {
     id: 'documents',
-    label: 'Documents',
+    label: 'اسناد',
   },
 ] as const
 
 const displayFormSchema = z.object({
   items: z.array(z.string()).refine((value) => value.some((item) => item), {
-    message: 'You have to select at least one item.',
+    message: 'باید حداقل یک مورد را انتخاب کنید.',
   }),
 })
 
@@ -72,9 +72,9 @@ export function DisplayForm() {
           render={() => (
             <FormItem>
               <div className='mb-4'>
-                <FormLabel className='text-base'>Sidebar</FormLabel>
+                <FormLabel className='text-base'>نوار کناری</FormLabel>
                 <FormDescription>
-                  Select the items you want to display in the sidebar.
+                  مواردی را که می‌خواهید در نوار کناری نمایش داده شوند، انتخاب کنید.
                 </FormDescription>
               </div>
               {items.map((item) => (
@@ -114,7 +114,7 @@ export function DisplayForm() {
             </FormItem>
           )}
         />
-        <Button type='submit'>Update display</Button>
+        <Button type='submit'>به‌روزرسانی نمایش</Button>
       </form>
     </Form>
   )
