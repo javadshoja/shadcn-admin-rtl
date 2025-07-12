@@ -15,7 +15,7 @@ export function RecentSales() {
               ali.mohammadi@email.com
             </p>
           </div>
-          <div className='dir-ltr font-medium text-end'>+$1,999.00</div>
+          <div className='dir-ltr text-end font-medium'>+$1,999.00</div>
         </div>
       </div>
       <div className='flex items-center gap-4'>
@@ -30,7 +30,7 @@ export function RecentSales() {
               mohammad.hosseini@email.com
             </p>
           </div>
-          <div className='dir-ltr font-medium text-end'>+$39.00</div>
+          <div className='dir-ltr text-end font-medium'>+$39.00</div>
         </div>
       </div>
       <div className='flex items-center gap-4'>
@@ -45,7 +45,7 @@ export function RecentSales() {
               mohammad.hosseini@email.com
             </p>
           </div>
-          <div className='dir-ltr font-medium text-end'>+$299.00</div>
+          <div className='dir-ltr text-end font-medium'>+$299.00</div>
         </div>
       </div>
 
@@ -61,7 +61,7 @@ export function RecentSales() {
               mohammad.hosseini@email.com
             </p>
           </div>
-          <div className='dir-ltr font-medium text-end'>+$99.00</div>
+          <div className='dir-ltr text-end font-medium'>+$99.00</div>
         </div>
       </div>
 
@@ -77,7 +77,7 @@ export function RecentSales() {
               mohammad.hosseini@email.com
             </p>
           </div>
-          <div className='dir-ltr font-medium text-end'>+$39.00</div>
+          <div className='dir-ltr text-end font-medium'>+$39.00</div>
         </div>
       </div>
     </div>

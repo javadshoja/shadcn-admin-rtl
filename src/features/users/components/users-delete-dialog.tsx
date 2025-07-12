@@ -43,8 +43,8 @@ export function UsersDeleteDialog({ open, onOpenChange, currentRow }: Props) {
       desc={
         <div className='space-y-4'>
           <p className='mb-2'>
-            آیا از حذف{' '}
-            <span className='font-bold'>{currentRow.username}</span> مطمئن هستید؟
+            آیا از حذف <span className='font-bold'>{currentRow.username}</span>{' '}
+            مطمئن هستید؟
             <br />
             این عمل کاربر با نقش{' '}
             <span className='font-bold'>

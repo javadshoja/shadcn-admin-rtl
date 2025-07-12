@@ -135,9 +135,13 @@ export function UsersActionDialog({ currentRow, open, onOpenChange }: Props) {
     >
       <DialogContent className='sm:max-w-lg'>
         <DialogHeader className='text-right'>
-          <DialogTitle>{isEdit ? 'ویرایش کاربر' : 'افزودن کاربر جدید'}</DialogTitle>
+          <DialogTitle>
+            {isEdit ? 'ویرایش کاربر' : 'افزودن کاربر جدید'}
+          </DialogTitle>
           <DialogDescription>
-            {isEdit ? 'کاربر را در اینجا به‌روزرسانی کنید. ' : 'کاربر جدید را در اینجا ایجاد کنید. '}
+            {isEdit
+              ? 'کاربر را در اینجا به‌روزرسانی کنید. '
+              : 'کاربر جدید را در اینجا ایجاد کنید. '}
             وقتی کارتان تمام شد روی ذخیره کلیک کنید.
           </DialogDescription>
         </DialogHeader>

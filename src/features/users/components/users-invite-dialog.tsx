@@ -67,8 +67,8 @@ export function UsersInviteDialog({ open, onOpenChange }: Props) {
             <IconMailPlus /> دعوت کاربر
           </DialogTitle>
           <DialogDescription>
-            کاربر جدید را با ارسال دعوت‌نامه ایمیلی به تیم خود دعوت کنید.
-            برای تعیین سطح دسترسی، یک نقش به آن‌ها اختصاص دهید.
+            کاربر جدید را با ارسال دعوت‌نامه ایمیلی به تیم خود دعوت کنید. برای
+            تعیین سطح دسترسی، یک نقش به آن‌ها اختصاص دهید.
           </DialogDescription>
         </DialogHeader>
         <Form {...form}>
