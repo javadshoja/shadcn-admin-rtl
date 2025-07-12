@@ -80,7 +80,7 @@ export default function Chats() {
             <div className='bg-background sticky top-0 z-10 -mx-4 px-4 pb-3 shadow-md sm:static sm:z-auto sm:mx-0 sm:p-0 sm:shadow-none'>
               <div className='flex items-center justify-between py-2'>
                 <div className='flex gap-2'>
-                  <h1 className='text-2xl font-bold'>پیام ها</h1>
+                  <h1 className='text-2xl font-bold'>پیام‌ها</h1>
                   <IconMessages size={20} />
                 </div>
 
@@ -112,13 +112,14 @@ export default function Chats() {
                 const { id, profile, username, messages, fullName } = chatUsr
                 const lastConvo = messages[0]
                 const lastMsg =
-                  lastConvo.sender === 'You'
-                    ? `You: ${lastConvo.message}`
+                  lastConvo.sender === 'شما'
+                    ? `شما: ${lastConvo.message}`
                     : lastConvo.message
                 return (
                   <Fragment key={id}>
                     <button
                       type='button'
+                      dir='rtl'
                       className={cn(
                         `hover:bg-secondary/75 -mx-1 flex w-full rounded-md px-2 py-2 text-right text-sm`,
                         selectedUser?.id === id && 'sm:bg-muted'
@@ -320,7 +321,7 @@ export default function Chats() {
                   <IconMessages className='size-8' />
                 </div>
                 <div className='space-y-2 text-center'>
-                  <h1 className='text-xl font-semibold'>پیام های شما</h1>
+                  <h1 className='text-xl font-semibold'>پیام‌های شما</h1>
                   <p className='text-muted-foreground text-sm'>
                     یک پیام برای شروع چت ارسال کنید.
                   </p>
