@@ -5,13 +5,16 @@ import { Input } from '@/components/ui/input'
 import { userTypes } from '../data/data'
 import { DataTableFacetedFilter } from './data-table-faceted-filter'
 import { DataTableViewOptions } from './data-table-view-options'
+import { ColumnDef } from '@tanstack/react-table'
 
 interface DataTableToolbarProps<TData> {
   table: Table<TData>
+  columns: ColumnDef<TData>[]
 }
 
 export function DataTableToolbar<TData>({
   table,
+  columns,
 }: DataTableToolbarProps<TData>) {
   const isFiltered = table.getState().columnFilters.length > 0
 
@@ -60,7 +63,7 @@ export function DataTableToolbar<TData>({
           </Button>
         )}
       </div>
-      <DataTableViewOptions table={table} />
+      <DataTableViewOptions table={table} columns={columns} />
     </div>
   )
 }

@@ -41,6 +41,7 @@ export const columns: ColumnDef<User>[] = [
   },
   {
     accessorKey: 'username',
+    id: 'username',
     header: ({ column }) => (
       <DataTableColumnHeader column={column} title='نام کاربری' />
     ),
@@ -53,6 +54,7 @@ export const columns: ColumnDef<User>[] = [
         'bg-background transition-colors duration-200 group-hover/row:bg-muted group-data-[state=selected]/row:bg-muted',
         'sticky right--6 md:table-cell'
       ),
+      title: 'نام کاربری',
     },
     enableHiding: false,
   },
@@ -66,9 +68,10 @@ export const columns: ColumnDef<User>[] = [
       const fullName = `${firstName} ${lastName}`
       return <LongText className='max-w-36'>{fullName}</LongText>
     },
-    meta: { className: 'w-36' },
+    meta: { className: 'w-36', title: 'نام' },
   },
   {
+    id: 'email',
     accessorKey: 'email',
     header: ({ column }) => (
       <DataTableColumnHeader column={column} title='ایمیل' />
@@ -76,17 +79,21 @@ export const columns: ColumnDef<User>[] = [
     cell: ({ row }) => (
       <div className='w-fit text-nowrap'>{row.getValue('email')}</div>
     ),
+    meta: { title: 'ایمیل' },
   },
   {
+    id: 'phoneNumber',
     accessorKey: 'phoneNumber',
     header: ({ column }) => (
       <DataTableColumnHeader column={column} title='شماره تلفن' />
     ),
     cell: ({ row }) => <div>{row.getValue('phoneNumber')}</div>,
     enableSorting: false,
+    meta: { title: 'شماره تلفن' },
   },
   {
     accessorKey: 'status',
+    id: 'status',
     header: ({ column }) => (
       <DataTableColumnHeader column={column} title='وضعیت' />
     ),
@@ -106,9 +113,11 @@ export const columns: ColumnDef<User>[] = [
     },
     enableHiding: false,
     enableSorting: false,
+    meta: { title: 'وضعیت' },
   },
   {
     accessorKey: 'role',
+    id: 'role',
     header: ({ column }) => (
       <DataTableColumnHeader column={column} title='نقش' />
     ),
@@ -134,6 +143,7 @@ export const columns: ColumnDef<User>[] = [
     },
     enableSorting: false,
     enableHiding: false,
+    meta: { title: 'نقش' },
   },
   {
     id: 'actions',
