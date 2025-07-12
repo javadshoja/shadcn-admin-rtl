@@ -301,11 +301,11 @@ export default function Chats() {
                       size='icon'
                       className='hidden sm:inline-flex'
                     >
-                      <IconSend size={20} />
+                      <IconSend size={20} className='rotate-270' />
                     </Button>
                   </div>
                   <Button className='h-full sm:hidden'>
-                    <IconSend size={18} /> ارسال
+                    <IconSend size={18} className='rotate-270' /> ارسال
                   </Button>
                 </form>
               </div>
