@@ -27,7 +27,7 @@ function ClerkAuthLayout() {
           >
             <path d='M15 6v12a3 3 0 1 0 3-3H6a3 3 0 1 0 3 3V6a3 3 0 1 0-3 3h12a3 3 0 1 0-3-3' />
           </svg>
-          Shadcn Admin
+          Shadcn پنل مدیریت
         </Link>
 
         <ClerkFullLogo className='relative m-auto size-96' />
@@ -35,10 +35,9 @@ function ClerkAuthLayout() {
         <div className='relative z-20 mt-auto'>
           <blockquote className='space-y-2'>
             <p className='text-lg'>
-              &ldquo; Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Sint, magni debitis inventore asperiores velit! &rdquo;
+              &ldquo; لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. &rdquo;
             </p>
-            <footer className='text-sm'>John Doe</footer>
+            <footer className='text-sm'>جان دو</footer>
           </blockquote>
         </div>
       </div>
@@ -51,15 +50,15 @@ function ClerkAuthLayout() {
             }}
             contentProps={{ side: 'top', align: 'end', className: 'w-auto' }}
           >
-            Welcome to the example Clerk auth page. <br />
-            Back to{' '}
+            به صفحه احراز هویت Clerk خوش آمدید. <br />
+            بازگشت به{' '}
             <Link
               to='/'
               className='underline decoration-dashed underline-offset-2'
             >
-              Dashboard
+              داشبورد
             </Link>{' '}
-            ?
+            ؟
           </LearnMore>
           <Outlet />
         </div>

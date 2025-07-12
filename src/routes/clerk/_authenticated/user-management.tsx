@@ -59,10 +59,10 @@ function UserManagement() {
           <Main>
             <div className='mb-2 flex flex-wrap items-center justify-between space-y-2'>
               <div>
-                <h2 className='text-2xl font-bold tracking-tight'>User List</h2>
+                <h2 className='text-2xl font-bold tracking-tight'>لیست کاربران</h2>
                 <div className='flex gap-1'>
                   <p className='text-muted-foreground'>
-                    Manage your users and their roles here.
+                    کاربران و نقش‌های آن‌ها را در اینجا مدیریت کنید.
                   </p>
                   <LearnMore
                     open={opened}
@@ -70,7 +70,7 @@ function UserManagement() {
                     contentProps={{ side: 'right' }}
                   >
                     <p>
-                      This is the same as{' '}
+                      این همانند{' '}
                       <Link
                         to='/users'
                         className='text-blue-500 underline decoration-dashed underline-offset-2'
@@ -80,8 +80,7 @@ function UserManagement() {
                     </p>
 
                     <p className='mt-4'>
-                      You can sign out or manage/delete your account via the
-                      User Profile menu in the top-right corner of the page.
+                      می‌توانید از طریق منوی پروفایل کاربر در گوشه بالا سمت راست صفحه، از سیستم خارج شوید یا حساب خود را مدیریت/حذف کنید.
                       <IconArrowUpRight className='inline-block size-4' />
                     </p>
                   </LearnMore>
@@ -130,13 +129,13 @@ function Unauthorized() {
     <div className='h-svh'>
       <div className='m-auto flex h-full w-full flex-col items-center justify-center gap-2'>
         <h1 className='text-[7rem] leading-tight font-bold'>401</h1>
-        <span className='font-medium'>Unauthorized Access</span>
+        <span className='font-medium'>دسترسی غیرمجاز</span>
         <p className='text-muted-foreground text-center'>
-          You must be authenticated via Clerk{' '}
+          شما باید از طریق Clerk احراز هویت شوید{' '}
           <sup>
             <LearnMore open={opened} onOpenChange={setOpened}>
               <p>
-                This is the same as{' '}
+                این همانند{' '}
                 <Link
                   to='/users'
                   className='text-blue-500 underline decoration-dashed underline-offset-2'
@@ -145,23 +144,22 @@ function Unauthorized() {
                 </Link>
                 .{' '}
               </p>
-              <p>You must first sign in using Clerk to access this route. </p>
+              <p>برای دسترسی به این مسیر، ابتدا باید با استفاده از Clerk وارد شوید. </p>
 
               <p className='mt-4'>
-                After signing in, you'll be able to sign out or delete your
-                account via the User Profile dropdown on this page.
+                پس از ورود، می‌توانید از طریق منوی کشویی پروفایل کاربر در این صفحه، از سیستم خارج شوید یا حساب خود را حذف کنید.
               </p>
             </LearnMore>
           </sup>
           <br />
-          to access this resource.
+          برای دسترسی به این منبع.
         </p>
         <div className='mt-6 flex gap-4'>
           <Button variant='outline' onClick={() => history.go(-1)}>
-            Go Back
+            بازگشت
           </Button>
           <Button onClick={() => navigate({ to: '/clerk/sign-in' })}>
-            <ClerkLogo className='invert' /> Sign in
+            <ClerkLogo className='invert' /> ورود
           </Button>
         </div>
         <div className='mt-4 h-8 text-center'>
@@ -169,11 +167,11 @@ function Unauthorized() {
             <>
               <p>
                 {countdown > 0
-                  ? `Redirecting to Sign In page in ${countdown}s`
-                  : `Redirecting...`}
+                  ? `تغییر مسیر به صفحه ورود در ${countdown} ثانیه`
+                  : `در حال تغییر مسیر...`}
               </p>
               <Button variant='link' onClick={() => setCancelled(true)}>
-                Cancel Redirect
+                لغو تغییر مسیر
               </Button>
             </>
           )}
