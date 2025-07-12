@@ -20,14 +20,17 @@ export default function GeneralError({
         )}
         <span className='font-medium'>اوه! مشکلی پیش آمد {`:')`}</span>
         <p className='text-muted-foreground text-center'>
-          ما برای این مشکل پوزش می‌خواهیم. <br /> لطفاً بعداً دوباره امتحان کنید.
+          ما برای این مشکل پوزش می‌خواهیم. <br /> لطفاً بعداً دوباره امتحان
+          کنید.
         </p>
         {!minimal && (
           <div className='mt-6 flex gap-4'>
             <Button variant='outline' onClick={() => history.go(-1)}>
               بازگشت
             </Button>
-            <Button onClick={() => navigate({ to: '/' })}>بازگشت به خانه</Button>
+            <Button onClick={() => navigate({ to: '/' })}>
+              بازگشت به خانه
+            </Button>
           </div>
         )}
       </div>

@@ -10,7 +10,8 @@ export default function UnauthorisedError() {
         <h1 className='text-[7rem] leading-tight font-bold'>401</h1>
         <span className='font-medium'>دسترسی غیرمجاز</span>
         <p className='text-muted-foreground text-center'>
-          لطفاً با اطلاعات کاربری مناسب وارد شوید <br /> تا به این منبع دسترسی پیدا کنید.
+          لطفاً با اطلاعات کاربری مناسب وارد شوید <br /> تا به این منبع دسترسی
+          پیدا کنید.
         </p>
         <div className='mt-6 flex gap-4'>
           <Button variant='outline' onClick={() => history.go(-1)}>
