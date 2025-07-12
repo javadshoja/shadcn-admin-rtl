@@ -104,7 +104,9 @@ export default function Dashboard() {
                   </svg>
                 </CardHeader>
                 <CardContent>
-                  <div className='text-2xl font-bold'>+2350</div>
+                  <div className='dir-ltr text-end text-2xl font-bold'>
+                    +2350
+                  </div>
                   <p className='text-muted-foreground text-xs'>
                     +180.1% از ماه گذشته
                   </p>
@@ -128,7 +130,9 @@ export default function Dashboard() {
                   </svg>
                 </CardHeader>
                 <CardContent>
-                  <div className='text-2xl font-bold'>+12,234</div>
+                  <div className='dir-ltr text-end text-2xl font-bold'>
+                    +12,234
+                  </div>
                   <p className='text-muted-foreground text-xs'>
                     +19% از ماه گذشته
                   </p>
@@ -153,7 +157,9 @@ export default function Dashboard() {
                   </svg>
                 </CardHeader>
                 <CardContent>
-                  <div className='text-2xl font-bold'>+573</div>
+                  <div className='dir-ltr text-end text-2xl font-bold'>
+                    +573
+                  </div>
                   <p className='text-muted-foreground text-xs'>
                     +201 در ساعت گذشته
                   </p>

@@ -10,12 +10,12 @@ export function RecentSales() {
         </Avatar>
         <div className='flex flex-1 flex-wrap items-center justify-between'>
           <div className='space-y-1'>
-            <p className='text-sm leading-none font-medium'>Olivia Martin</p>
+            <p className='text-sm leading-none font-medium'>علی محمدی</p>
             <p className='text-muted-foreground text-sm'>
-              olivia.martin@email.com
+              ali.mohammadi@email.com
             </p>
           </div>
-          <div className='font-medium'>+$1,999.00</div>
+          <div className='dir-ltr font-medium text-end'>+$1,999.00</div>
         </div>
       </div>
       <div className='flex items-center gap-4'>
@@ -25,12 +25,12 @@ export function RecentSales() {
         </Avatar>
         <div className='flex flex-1 flex-wrap items-center justify-between'>
           <div className='space-y-1'>
-            <p className='text-sm leading-none font-medium'>Jackson Lee</p>
+            <p className='text-sm leading-none font-medium'>محمد حسین حسینی</p>
             <p className='text-muted-foreground text-sm'>
-              jackson.lee@email.com
+              mohammad.hosseini@email.com
             </p>
           </div>
-          <div className='font-medium'>+$39.00</div>
+          <div className='dir-ltr font-medium text-end'>+$39.00</div>
         </div>
       </div>
       <div className='flex items-center gap-4'>
@@ -40,12 +40,12 @@ export function RecentSales() {
         </Avatar>
         <div className='flex flex-1 flex-wrap items-center justify-between'>
           <div className='space-y-1'>
-            <p className='text-sm leading-none font-medium'>Isabella Nguyen</p>
+            <p className='text-sm leading-none font-medium'>محمد حسین حسینی</p>
             <p className='text-muted-foreground text-sm'>
-              isabella.nguyen@email.com
+              mohammad.hosseini@email.com
             </p>
           </div>
-          <div className='font-medium'>+$299.00</div>
+          <div className='dir-ltr font-medium text-end'>+$299.00</div>
         </div>
       </div>
 
@@ -56,10 +56,12 @@ export function RecentSales() {
         </Avatar>
         <div className='flex flex-1 flex-wrap items-center justify-between'>
           <div className='space-y-1'>
-            <p className='text-sm leading-none font-medium'>William Kim</p>
-            <p className='text-muted-foreground text-sm'>will@email.com</p>
+            <p className='text-sm leading-none font-medium'>محمد حسین حسینی</p>
+            <p className='text-muted-foreground text-sm'>
+              mohammad.hosseini@email.com
+            </p>
           </div>
-          <div className='font-medium'>+$99.00</div>
+          <div className='dir-ltr font-medium text-end'>+$99.00</div>
         </div>
       </div>
 
@@ -70,12 +72,12 @@ export function RecentSales() {
         </Avatar>
         <div className='flex flex-1 flex-wrap items-center justify-between'>
           <div className='space-y-1'>
-            <p className='text-sm leading-none font-medium'>Sofia Davis</p>
+            <p className='text-sm leading-none font-medium'>محمد حسین حسینی</p>
             <p className='text-muted-foreground text-sm'>
-              sofia.davis@email.com
+              mohammad.hosseini@email.com
             </p>
           </div>
-          <div className='font-medium'>+$39.00</div>
+          <div className='dir-ltr font-medium text-end'>+$39.00</div>
         </div>
       </div>
     </div>
