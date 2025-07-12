@@ -94,9 +94,7 @@ export function AppearanceForm() {
           render={({ field }) => (
             <FormItem className='space-y-1'>
               <FormLabel>تم</FormLabel>
-              <FormDescription>
-                تم داشبورد را انتخاب کنید.
-              </FormDescription>
+              <FormDescription>تم داشبورد را انتخاب کنید.</FormDescription>
               <FormMessage />
               <RadioGroup
                 onValueChange={field.onChange}

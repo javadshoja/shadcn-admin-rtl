@@ -74,7 +74,8 @@ export function DisplayForm() {
               <div className='mb-4'>
                 <FormLabel className='text-base'>نوار کناری</FormLabel>
                 <FormDescription>
-                  مواردی را که می‌خواهید در نوار کناری نمایش داده شوند، انتخاب کنید.
+                  مواردی را که می‌خواهید در نوار کناری نمایش داده شوند، انتخاب
+                  کنید.
                 </FormDescription>
               </div>
               {items.map((item) => (

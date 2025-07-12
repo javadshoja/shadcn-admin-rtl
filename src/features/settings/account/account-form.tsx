@@ -90,7 +90,8 @@ export function AccountForm() {
                 <Input placeholder='نام شما' {...field} />
               </FormControl>
               <FormDescription>
-                این نامی است که در پروفایل شما و در ایمیل‌ها نمایش داده خواهد شد.
+                این نامی است که در پروفایل شما و در ایمیل‌ها نمایش داده خواهد
+                شد.
               </FormDescription>
               <FormMessage />
             </FormItem>

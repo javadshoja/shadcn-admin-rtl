@@ -32,7 +32,8 @@ export default function Settings() {
             تنظیمات
           </h1>
           <p className='text-muted-foreground'>
-            تنظیمات حساب کاربری خود را مدیریت کرده و اولویت‌های ایمیل را تنظیم کنید.
+            تنظیمات حساب کاربری خود را مدیریت کرده و اولویت‌های ایمیل را تنظیم
+            کنید.
           </p>
         </div>
         <Separator className='my-4 lg:my-6' />
