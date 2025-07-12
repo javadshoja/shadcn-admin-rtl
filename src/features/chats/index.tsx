@@ -45,7 +45,7 @@ export default function Chats() {
 
   const currentMessage = selectedUser?.messages.reduce(
     (acc: Record<string, Convo[]>, obj) => {
-      const key = format(obj.timestamp, 'd MMM, yyyy')
+      const key = format(obj.timestamp, 'd MMMM, yyyy')
 
       // Create an array for the category if it doesn't exist
       if (!acc[key]) {

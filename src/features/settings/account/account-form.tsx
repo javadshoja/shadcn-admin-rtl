@@ -114,7 +114,7 @@ export function AccountForm() {
                       )}
                     >
                       {field.value ? (
-                        format(field.value, 'MMM d, yyyy')
+                        format(field.value, 'd MMMM, yyyy')
                       ) : (
                         <span>Pick a date</span>
                       )}
