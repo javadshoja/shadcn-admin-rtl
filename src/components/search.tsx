@@ -9,7 +9,7 @@ interface Props {
   placeholder?: string
 }
 
-export function Search({ className = '', placeholder = 'Search' }: Props) {
+export function Search({ className = '', placeholder = 'جوستجو' }: Props) {
   const { setOpen } = useSearch()
   return (
     <Button
@@ -25,8 +25,8 @@ export function Search({ className = '', placeholder = 'Search' }: Props) {
       </kbd>
 
       <span className='mr-3'>{placeholder}</span>
-      
-<IconSearch
+
+      <IconSearch
         aria-hidden='true'
         className='absolute top-1/2 right-1.5 -translate-y-1/2'
       />

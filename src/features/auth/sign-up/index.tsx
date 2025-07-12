@@ -16,16 +16,16 @@ export default function SignUp() {
       <Card className='gap-4'>
         <CardHeader>
           <CardTitle className='text-lg tracking-tight'>
-            Create an account
+            ایجاد حساب کاربری
           </CardTitle>
           <CardDescription>
-            Enter your email and password to create an account. <br />
-            Already have an account?{' '}
+            ایمیل و رمز عبور خود را برای ایجاد حساب کاربری وارد کنید. <br />
+            قبلاً حساب کاربری دارید؟{' '}
             <Link
               to='/sign-in'
               className='hover:text-primary underline underline-offset-4'
             >
-              Sign In
+              ورود
             </Link>
           </CardDescription>
         </CardHeader>
@@ -34,21 +34,21 @@ export default function SignUp() {
         </CardContent>
         <CardFooter>
           <p className='text-muted-foreground px-8 text-center text-sm'>
-            By creating an account, you agree to our{' '}
+            با ایجاد حساب کاربری، شما با{' '}
             <a
               href='/terms'
               className='hover:text-primary underline underline-offset-4'
             >
-              Terms of Service
+              شرایط خدمات
             </a>{' '}
-            and{' '}
+            و{' '}
             <a
               href='/privacy'
               className='hover:text-primary underline underline-offset-4'
             >
-              Privacy Policy
-            </a>
-            .
+              سیاست حفظ حریم خصوصی
+            </a>{' '}
+            ما موافقت می‌کنید.
           </p>
         </CardFooter>
       </Card>

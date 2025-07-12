@@ -16,11 +16,11 @@ export default function Otp() {
       <Card className='gap-4'>
         <CardHeader>
           <CardTitle className='text-base tracking-tight'>
-            Two-factor Authentication
+            احراز هویت دو مرحله‌ای
           </CardTitle>
           <CardDescription>
-            Please enter the authentication code. <br /> We have sent the
-            authentication code to your email.
+            لطفاً کد احراز هویت را وارد کنید. <br /> ما کد احراز هویت را به
+            ایمیل شما ارسال کرده‌ایم.
           </CardDescription>
         </CardHeader>
         <CardContent>
@@ -28,12 +28,12 @@ export default function Otp() {
         </CardContent>
         <CardFooter>
           <p className='text-muted-foreground px-8 text-center text-sm'>
-            Haven't received it?{' '}
+            هنوز دریافت نکرده‌اید؟{' '}
             <Link
               to='/sign-in'
               className='hover:text-primary underline underline-offset-4'
             >
-              Resend a new code.
+              ارسال مجدد کد جدید.
             </Link>
             .
           </p>

@@ -39,9 +39,9 @@ export default function SidebarNav({
       <div className='p-1 md:hidden'>
         <Select value={val} onValueChange={handleSelect}>
           <SelectTrigger className='h-12 sm:w-48'>
-            <SelectValue placeholder='Theme' />
+            <SelectValue placeholder='تم' />
           </SelectTrigger>
-          <SelectContent>
+          <SelectContent dir='rtl'>
             {items.map((item) => (
               <SelectItem key={item.href} value={item.href}>
                 <div className='flex gap-x-4 px-2 py-1'>
@@ -70,6 +70,7 @@ export default function SidebarNav({
             <Link
               key={item.href}
               to={item.href}
+              dir='rtl'
               className={cn(
                 buttonVariants({ variant: 'ghost' }),
                 pathname === item.href

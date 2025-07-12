@@ -1,30 +1,34 @@
-import { faker } from '@faker-js/faker'
+import { fa, Faker } from '@faker-js/faker'
+
+export const customFaker = new Faker({
+  locale: [fa],
+})
 
 export const users = Array.from({ length: 20 }, () => {
-  const firstName = faker.person.firstName()
-  const lastName = faker.person.lastName()
+  const firstName = customFaker.person.firstName()
+  const lastName = customFaker.person.lastName()
   return {
-    id: faker.string.uuid(),
+    id: customFaker.string.uuid(),
     firstName,
     lastName,
-    username: faker.internet
+    username: customFaker.internet
       .username({ firstName, lastName })
       .toLocaleLowerCase(),
-    email: faker.internet.email({ firstName }).toLocaleLowerCase(),
-    phoneNumber: faker.phone.number({ style: 'international' }),
-    status: faker.helpers.arrayElement([
+    email: customFaker.internet.email({ firstName }).toLocaleLowerCase(),
+    phoneNumber: customFaker.phone.number({ style: 'international' }),
+    status: customFaker.helpers.arrayElement([
       'active',
       'inactive',
       'invited',
       'suspended',
     ]),
-    role: faker.helpers.arrayElement([
+    role: customFaker.helpers.arrayElement([
       'superadmin',
       'admin',
       'cashier',
       'manager',
     ]),
-    createdAt: faker.date.past(),
-    updatedAt: faker.date.recent(),
+    createdAt: customFaker.date.past(),
+    updatedAt: customFaker.date.recent(),
   }
 })

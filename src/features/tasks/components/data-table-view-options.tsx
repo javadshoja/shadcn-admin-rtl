@@ -1,6 +1,6 @@
 import { DropdownMenuTrigger } from '@radix-ui/react-dropdown-menu'
 import { MixerHorizontalIcon } from '@radix-ui/react-icons'
-import { Table } from '@tanstack/react-table'
+import { ColumnDef, Table } from '@tanstack/react-table'
 import { Button } from '@/components/ui/button'
 import {
   DropdownMenu,
@@ -10,13 +10,15 @@ import {
   DropdownMenuSeparator,
 } from '@/components/ui/dropdown-menu'
 
-interface DataTableViewOptionsProps<TData> {
+interface DataTableViewOptionsProps<TData, TValue> {
   table: Table<TData>
+  columns: ColumnDef<TData, TValue>[]
 }
 
-export function DataTableViewOptions<TData>({
+export function DataTableViewOptions<TData, TValue>({
   table,
-}: DataTableViewOptionsProps<TData>) {
+  columns,
+}: DataTableViewOptionsProps<TData, TValue>) {
   return (
     <DropdownMenu modal={false}>
       <DropdownMenuTrigger asChild>
@@ -26,11 +28,11 @@ export function DataTableViewOptions<TData>({
           className='mr-auto hidden h-8 lg:flex'
         >
           <MixerHorizontalIcon className='ml-2 h-4 w-4' />
-          View
+          نمایش
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align='end' className='w-[150px]'>
-        <DropdownMenuLabel>Toggle columns</DropdownMenuLabel>
+        <DropdownMenuLabel>تغییر ستون‌ها</DropdownMenuLabel>
         <DropdownMenuSeparator />
         {table
           .getAllColumns()
@@ -46,7 +48,7 @@ export function DataTableViewOptions<TData>({
                 checked={column.getIsVisible()}
                 onCheckedChange={(value) => column.toggleVisibility(!!value)}
               >
-                {column.id}
+                {columns.find((clm) => clm.id === column.id)?.meta?.title}
               </DropdownMenuCheckboxItem>
             )
           })}

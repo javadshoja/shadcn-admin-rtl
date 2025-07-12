@@ -24,7 +24,7 @@ import {
 type OtpFormProps = HTMLAttributes<HTMLFormElement>
 
 const formSchema = z.object({
-  otp: z.string().min(1, { message: 'Please enter your otp code.' }),
+  otp: z.string().min(1, { message: 'لطفاً کد OTP خود را وارد کنید.' }),
 })
 
 export function OtpForm({ className, ...props }: OtpFormProps) {
@@ -59,25 +59,26 @@ export function OtpForm({ className, ...props }: OtpFormProps) {
           control={form.control}
           name='otp'
           render={({ field }) => (
-            <FormItem>
-              <FormLabel className='sr-only'>One-Time Password</FormLabel>
+            <FormItem dir='ltr'>
+              <FormLabel className='sr-only'>رمز عبور یک‌بار مصرف</FormLabel>
               <FormControl>
                 <InputOTP
                   maxLength={6}
                   {...field}
+                  dir='ltr'
                   containerClassName='justify-between sm:[&>[data-slot="input-otp-group"]>div]:w-12'
                 >
-                  <InputOTPGroup>
-                    <InputOTPSlot index={0} />
-                    <InputOTPSlot index={1} />
+                  <InputOTPGroup dir='ltr'>
+                    <InputOTPSlot index={0} dir='ltr' />
+                    <InputOTPSlot index={1} dir='ltr' />
                   </InputOTPGroup>
                   <InputOTPSeparator />
-                  <InputOTPGroup>
-                    <InputOTPSlot index={2} />
-                    <InputOTPSlot index={3} />
+                  <InputOTPGroup dir='ltr'>
+                    <InputOTPSlot index={2} dir='ltr' />
+                    <InputOTPSlot index={3} dir='ltr' />
                   </InputOTPGroup>
                   <InputOTPSeparator />
-                  <InputOTPGroup>
+                  <InputOTPGroup dir='ltr'>
                     <InputOTPSlot index={4} />
                     <InputOTPSlot index={5} />
                   </InputOTPGroup>
@@ -88,7 +89,7 @@ export function OtpForm({ className, ...props }: OtpFormProps) {
           )}
         />
         <Button className='mt-2' disabled={otp.length < 6 || isLoading}>
-          Verify
+          تأیید
         </Button>
       </form>
     </Form>

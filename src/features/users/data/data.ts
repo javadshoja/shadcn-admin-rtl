@@ -6,34 +6,57 @@ import {
 } from '@tabler/icons-react'
 import { UserStatus } from './schema'
 
-export const callTypes = new Map<UserStatus, string>([
-  ['active', 'bg-teal-100/30 text-teal-900 dark:text-teal-200 border-teal-200'],
-  ['inactive', 'bg-neutral-300/40 border-neutral-300'],
-  ['invited', 'bg-sky-200/40 text-sky-900 dark:text-sky-100 border-sky-300'],
+export const callTypes = new Map<
+  UserStatus,
+  { className: string; label: string }
+>([
+  [
+    'active',
+    {
+      className:
+        'bg-teal-100/30 text-teal-900 dark:text-teal-200 border-teal-200',
+      label: 'فعال',
+    },
+  ],
+  [
+    'inactive',
+    { className: 'bg-neutral-300/40 border-neutral-300', label: 'غیرفعال' },
+  ],
+  [
+    'invited',
+    {
+      className: 'bg-sky-200/40 text-sky-900 dark:text-sky-100 border-sky-300',
+      label: 'دعوت شده',
+    },
+  ],
   [
     'suspended',
-    'bg-destructive/10 dark:bg-destructive/50 text-destructive dark:text-primary border-destructive/10',
+    {
+      className:
+        'bg-destructive/10 dark:bg-destructive/50 text-destructive dark:text-primary border-destructive/10',
+      label: 'معلق',
+    },
   ],
 ])
 
 export const userTypes = [
   {
-    label: 'Superadmin',
+    label: 'مدیر کل',
     value: 'superadmin',
     icon: IconShield,
   },
   {
-    label: 'Admin',
+    label: 'مدیر',
     value: 'admin',
     icon: IconUserShield,
   },
   {
-    label: 'Manager',
+    label: 'مدیر میانی',
     value: 'manager',
     icon: IconUsersGroup,
   },
   {
-    label: 'Cashier',
+    label: 'صندوق‌دار',
     value: 'cashier',
     icon: IconCash,
   },

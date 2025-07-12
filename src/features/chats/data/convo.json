@@ -4,77 +4,77 @@
       "id": "conv1",
       "profile": "https://randomuser.me/api/portraits/men/32.jpg",
       "username": "alex_dev",
-      "fullName": "Alex John",
-      "title": "Senior Backend Dev",
+      "fullName": "علی محمدی",
+      "title": "برنامه‌نویس ارشد بک‌اند",
       "messages": [
         {
           "sender": "You",
-          "message": "See you later, Alex!",
+          "message": "بعدا می‌بینمت علی!",
           "timestamp": "2024-08-24T11:15:15"
         },
         {
           "sender": "Alex",
-          "message": "Alright, talk to you later!",
+          "message": "باشه، بعدا باهات صحبت می‌کنم!",
           "timestamp": "2024-08-24T11:11:30"
         },
         {
           "sender": "You",
-          "message": "For sure. Anyway, I should get back to reviewing the project.",
+          "message": "حتما. به هر حال، باید برگردم به بررسی پروژه.",
           "timestamp": "2024-08-23T09:26:50"
         },
         {
           "sender": "Alex",
-          "message": "Yeah, let me know what you think.",
+          "message": "آره، نظرت رو بهم بگو.",
           "timestamp": "2024-08-23T09:25:15"
         },
         {
           "sender": "You",
-          "message": "Oh, nice! I've been waiting for that. I'll check it out later.",
+          "message": "اوه، عالیه! منتظرش بودم. بعدا چکش می‌کنم.",
           "timestamp": "2024-08-23T09:24:30"
         },
         {
           "sender": "Alex",
-          "message": "They've added a dark mode option! It looks really sleek.",
+          "message": "گزینه حالت تاریک رو اضافه کردن! خیلی شیک به نظر می‌رسه.",
           "timestamp": "2024-08-23T09:23:10"
         },
         {
           "sender": "You",
-          "message": "No, not yet. What's new?",
+          "message": "نه، هنوز نه. چه خبر جدیدی؟",
           "timestamp": "2024-08-23T09:22:00"
         },
         {
           "sender": "Alex",
-          "message": "By the way, have you seen the new feature update?",
+          "message": "راستی، آپدیت ویژگی جدید رو دیدی؟",
           "timestamp": "2024-08-23T09:21:05"
         },
         {
           "sender": "You",
-          "message": "Will do! Thanks, Alex.",
+          "message": "حتما! ممنون، علی.",
           "timestamp": "2024-08-23T09:20:10"
         },
         {
           "sender": "Alex",
-          "message": "Great! Let me know if you need any help.",
+          "message": "عالیه! اگه کمکی خواستی بهم بگو.",
           "timestamp": "2024-08-23T09:19:20"
         },
         {
           "sender": "You",
-          "message": "Almost done. Just need to review a few things.",
+          "message": "تقریبا تموم شده. فقط باید چند تا چیز رو بررسی کنم.",
           "timestamp": "2024-08-23T09:18:45"
         },
         {
           "sender": "Alex",
-          "message": "I'm good, thanks! Did you finish the project?",
+          "message": "من خوبم، ممنون! پروژه رو تموم کردی؟",
           "timestamp": "2024-08-23T09:17:10"
         },
         {
           "sender": "You",
-          "message": "Hey Alex, I'm doing well! How about you?",
+          "message": "سلام علی، من خوبم! تو چطوری؟",
           "timestamp": "2024-08-23T09:16:30"
         },
         {
           "sender": "Alex",
-          "message": "Hey Bob, how are you doing?",
+          "message": "سلام بابک، حالت چطوره؟",
           "timestamp": "2024-08-23T09:15:00"
         }
       ]
@@ -83,22 +83,22 @@
       "id": "conv2",
       "profile": "https://randomuser.me/api/portraits/women/45.jpg",
       "username": "taylor.codes",
-      "fullName": "Taylor Grande",
-      "title": "Tech Lead",
+      "fullName": "تیلور گرنده",
+      "title": "مدیر فنی",
       "messages": [
         {
           "sender": "Taylor",
-          "message": "Yeah, it's really well-explained. You should give it a try.",
+          "message": "آره، خیلی خوب توضیح داده شده. باید امتحانش کنی.",
           "timestamp": "2024-08-23T10:35:00"
         },
         {
           "sender": "You",
-          "message": "Not yet, is it good?",
+          "message": "هنوز نه، خوبه؟",
           "timestamp": "2024-08-23T10:32:00"
         },
         {
           "sender": "Taylor",
-          "message": "Hey, did you check out that new tutorial?",
+          "message": "هی، اون آموزش جدیده رو دیدی؟",
           "timestamp": "2024-08-23T10:30:00"
         }
       ]
@@ -107,27 +107,27 @@
       "id": "conv3",
       "profile": "https://randomuser.me/api/portraits/men/54.jpg",
       "username": "john_stack",
-      "fullName": "John Doe",
-      "title": "QA",
+      "fullName": "جان دو",
+      "title": "کنترل کیفیت",
       "messages": [
         {
           "sender": "You",
-          "message": "Yep, see ya. 👋🏼",
+          "message": "آره، می‌بینمت. 👋🏼",
           "timestamp": "2024-08-22T18:59:00"
         },
         {
           "sender": "John",
-          "message": "Great, see you then!",
+          "message": "عالیه، پس می‌بینمت!",
           "timestamp": "2024-08-22T18:55:00"
         },
         {
           "sender": "You",
-          "message": "Yes, same time as usual. I'll send the invite shortly.",
+          "message": "بله، همون ساعت همیشگی. به زودی دعوت‌نامه رو می‌فرستم.",
           "timestamp": "2024-08-22T18:50:00"
         },
         {
           "sender": "John",
-          "message": "Are we still on for the meeting tomorrow?",
+          "message": "جلسه فردا هنوز برقراره؟",
           "timestamp": "2024-08-22T18:45:00"
         }
       ]
@@ -136,27 +136,27 @@
       "id": "conv4",
       "profile": "https://randomuser.me/api/portraits/women/29.jpg",
       "username": "megan_frontend",
-      "fullName": "Megan Flux",
-      "title": "Jr Developer",
+      "fullName": "مگان فلوکس",
+      "title": "برنامه‌نویس تازه‌کار",
       "messages": [
         {
           "sender": "You",
-          "message": "Sure ✌🏼",
+          "message": "حتما ✌🏼",
           "timestamp": "2024-08-23T11:30:00"
         },
         {
           "sender": "Megan",
-          "message": "Thanks, appreciate it!",
+          "message": "ممنون، قدردانم!",
           "timestamp": "2024-08-23T11:30:00"
         },
         {
           "sender": "You",
-          "message": "Sure thing! I'll take a look in the next hour.",
+          "message": "حتما! تا یک ساعت دیگه یه نگاهی بهش می‌ندازم.",
           "timestamp": "2024-08-23T11:25:00"
         },
         {
           "sender": "Megan",
-          "message": "Hey! Do you have time to review my PR today?",
+          "message": "هی! وقت داری امروز PR من رو بررسی کنی؟",
           "timestamp": "2024-08-23T11:20:00"
         }
       ]
@@ -165,22 +165,22 @@
       "id": "conv5",
       "profile": "https://randomuser.me/api/portraits/men/72.jpg",
       "username": "dev_david",
-      "fullName": "David Brown",
-      "title": "Senior UI/UX Designer",
+      "fullName": "دیوید براون",
+      "title": "طراح ارشد UI/UX",
       "messages": [
         {
           "sender": "You",
-          "message": "Great, I'll review them now!",
+          "message": "عالیه، الان بررسیشون می‌کنم!",
           "timestamp": "2024-08-23T12:00:00"
         },
         {
           "sender": "David",
-          "message": "Just sent you the files. Let me know if you need any changes.",
+          "message": "فایل‌ها رو برات فرستادم. اگه تغییری لازم بود بهم بگو.",
           "timestamp": "2024-08-23T11:58:00"
         },
         {
           "sender": "David",
-          "message": "I finished the design for the dashboard. Thoughts?",
+          "message": "طراحی داشبورد رو تموم کردم. نظرت چیه؟",
           "timestamp": "2024-08-23T11:55:00"
         }
       ]
@@ -189,22 +189,22 @@
       "id": "conv6",
       "profile": "https://randomuser.me/api/portraits/women/68.jpg",
       "username": "julia.design",
-      "fullName": "Julia Carter",
-      "title": "Product Designer",
+      "fullName": "جولیا کارتر",
+      "title": "طراح محصول",
       "messages": [
         {
           "sender": "Julia",
-          "message": "Same here! It's coming together nicely.",
+          "message": "منم همینطور! داره خیلی خوب از آب درمیاد.",
           "timestamp": "2024-08-22T14:10:00"
         },
         {
           "sender": "You",
-          "message": "I'm really excited to see the final product!",
+          "message": "من واقعا هیجان‌زده‌ام که محصول نهایی رو ببینم!",
           "timestamp": "2024-08-22T14:15:00"
         },
         {
           "sender": "You",
-          "message": "How's the project looking on your end?",
+          "message": "پروژه از طرف تو چطور پیش می‌ره؟",
           "timestamp": "2024-08-22T14:05:00"
         }
       ]
@@ -213,22 +213,22 @@
       "id": "conv7",
       "profile": "https://randomuser.me/api/portraits/men/24.jpg",
       "username": "brad_dev",
-      "fullName": "Brad Wilson",
-      "title": "CEO",
+      "fullName": "برد ویلسون",
+      "title": "مدیرعامل",
       "messages": [
         {
           "sender": "Brad",
-          "message": "Got it! Thanks for the update.",
+          "message": "گرفتم! ممنون بابت آپدیت.",
           "timestamp": "2024-08-23T15:45:00"
         },
         {
           "sender": "You",
-          "message": "The release has been delayed to next week.",
+          "message": "انتشار به هفته آینده موکول شده.",
           "timestamp": "2024-08-23T15:40:00"
         },
         {
           "sender": "Brad",
-          "message": "Hey, any news on the release?",
+          "message": "هی، خبری از انتشار نیست؟",
           "timestamp": "2024-08-23T15:35:00"
         }
       ]
@@ -237,22 +237,22 @@
       "id": "conv8",
       "profile": "https://randomuser.me/api/portraits/women/34.jpg",
       "username": "katie_ui",
-      "fullName": "Katie Lee",
-      "title": "QA",
+      "fullName": "کتی لی",
+      "title": "کنترل کیفیت",
       "messages": [
         {
           "sender": "Katie",
-          "message": "I'll join the call in a few minutes.",
+          "message": "تا چند دقیقه دیگه به تماس ملحق می‌شم.",
           "timestamp": "2024-08-23T09:50:00"
         },
         {
           "sender": "You",
-          "message": "Perfect! We'll start as soon as you're in.",
+          "message": "عالیه! به محض اینکه وارد بشی شروع می‌کنیم.",
           "timestamp": "2024-08-23T09:48:00"
         },
         {
           "sender": "Katie",
-          "message": "Is the meeting still on?",
+          "message": "جلسه هنوز برقراره؟",
           "timestamp": "2024-08-23T09:45:00"
         }
       ]
@@ -261,22 +261,22 @@
       "id": "conv9",
       "profile": "https://randomuser.me/api/portraits/men/67.jpg",
       "username": "matt_fullstack",
-      "fullName": "Matt Green",
-      "title": "Full-stack Dev",
+      "fullName": "مت گرین",
+      "title": "برنامه‌نویس فول استک",
       "messages": [
         {
           "sender": "Matt",
-          "message": "Sure thing, I'll send over the updates shortly.",
+          "message": "حتما، به زودی آپدیت‌ها رو می‌فرستم.",
           "timestamp": "2024-08-23T10:25:00"
         },
         {
           "sender": "You",
-          "message": "Could you update the backend as well?",
+          "message": "می‌تونی بک‌اند رو هم آپدیت کنی؟",
           "timestamp": "2024-08-23T10:23:00"
         },
         {
           "sender": "Matt",
-          "message": "The frontend updates are done. How does it look?",
+          "message": "آپدیت‌های فرانت اند انجام شده. چطور به نظر می‌رسه؟",
           "timestamp": "2024-08-23T10:20:00"
         }
       ]
@@ -285,22 +285,22 @@
       "id": "conv10",
       "profile": "https://randomuser.me/api/portraits/women/56.jpg",
       "username": "sophie_dev",
-      "fullName": "Sophie Alex",
-      "title": "Jr. Frontend Dev",
+      "fullName": "سوفی الکس",
+      "title": "برنامه‌نویس تازه‌کار فرانت‌اند",
       "messages": [
         {
           "sender": "You",
-          "message": "Thanks! I'll review your code and get back to you.",
+          "message": "ممنون! کد شما را بررسی کرده و به شما بازخورد خواهم داد.",
           "timestamp": "2024-08-23T16:10:00"
         },
         {
           "sender": "Sophie",
-          "message": "Let me know if you need anything else.",
+          "message": "اگر چیز دیگری نیاز داشتید به من اطلاع دهید.",
           "timestamp": "2024-08-23T16:05:00"
         },
         {
           "sender": "Sophie",
-          "message": "The feature is implemented. Can you review it?",
+          "message": "ویژگی پیاده‌سازی شده است. می‌توانید آن را بررسی کنید؟",
           "timestamp": "2024-08-23T16:00:00"
         }
       ]

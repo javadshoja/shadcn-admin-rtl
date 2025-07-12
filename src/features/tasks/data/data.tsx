@@ -1,6 +1,6 @@
 import {
   IconArrowDown,
-  IconArrowRight,
+  IconArrowLeft,
   IconArrowUp,
   IconCircle,
   IconCircleCheck,
@@ -12,59 +12,59 @@ import {
 export const labels = [
   {
     value: 'bug',
-    label: 'Bug',
+    label: 'خطا',
   },
   {
     value: 'feature',
-    label: 'Feature',
+    label: 'ویژگی',
   },
   {
     value: 'documentation',
-    label: 'Documentation',
+    label: 'مستندات',
   },
 ]
 
 export const statuses = [
   {
     value: 'backlog',
-    label: 'Backlog',
+    label: 'لیست انتظار',
     icon: IconExclamationCircle,
   },
   {
     value: 'todo',
-    label: 'Todo',
+    label: 'انجام نشده',
     icon: IconCircle,
   },
   {
     value: 'in progress',
-    label: 'In Progress',
+    label: 'در حال انجام',
     icon: IconStopwatch,
   },
   {
     value: 'done',
-    label: 'Done',
+    label: 'انجام شده',
     icon: IconCircleCheck,
   },
   {
     value: 'canceled',
-    label: 'Canceled',
+    label: 'لغو شده',
     icon: IconCircleX,
   },
 ]
 
 export const priorities = [
   {
-    label: 'Low',
+    label: 'کم',
     value: 'low',
     icon: IconArrowDown,
   },
   {
-    label: 'Medium',
+    label: 'متوسط',
     value: 'medium',
-    icon: IconArrowRight,
+    icon: IconArrowLeft,
   },
   {
-    label: 'High',
+    label: 'زیاد',
     value: 'high',
     icon: IconArrowUp,
   },

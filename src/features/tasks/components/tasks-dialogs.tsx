@@ -49,21 +49,18 @@ export function TasksDialogs() {
               setTimeout(() => {
                 setCurrentRow(null)
               }, 500)
-              showSubmittedData(
-                currentRow,
-                'The following task has been deleted:'
-              )
+              showSubmittedData(currentRow, 'وظیفه زیر حذف شده است:')
             }}
             className='max-w-md'
-            title={`Delete this task: ${currentRow.id} ?`}
+            title={`این وظیفه را حذف کنید: ${currentRow.id} ؟`}
             desc={
               <>
-                You are about to delete a task with the ID{' '}
-                <strong>{currentRow.id}</strong>. <br />
-                This action cannot be undone.
+                شما در حال حذف وظیفه‌ای با شناسه{' '}
+                <strong>{currentRow.id}</strong> هستید. <br />
+                این عملیات قابل بازگشت نیست.
               </>
             }
-            confirmText='Delete'
+            confirmText='حذف'
           />
         </>
       )}

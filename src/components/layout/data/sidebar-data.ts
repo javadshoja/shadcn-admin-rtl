@@ -25,71 +25,71 @@ import { type SidebarData } from '../types'
 
 export const sidebarData: SidebarData = {
   user: {
-    name: 'satnaing',
-    email: 'satnaingdev@gmail.com',
+    name: 'جواد شجاع',
+    email: 'ijbrave@gmail.com',
     avatar: '/avatars/shadcn.jpg',
   },
   teams: [
     {
-      name: 'Shadcn Admin',
+      name: 'مدیریت',
       logo: Command,
       plan: 'Vite + ShadcnUI',
     },
     {
-      name: 'Acme Inc',
+      name: 'شرکت acme',
       logo: GalleryVerticalEnd,
       plan: 'Enterprise',
     },
     {
-      name: 'Acme Corp.',
+      name: 'گروه acme',
       logo: AudioWaveform,
       plan: 'Startup',
     },
   ],
   navGroups: [
     {
-      title: 'General',
+      title: 'عمومی',
       items: [
         {
-          title: 'Dashboard',
+          title: 'نمای کلی',
           url: '/',
           icon: IconLayoutDashboard,
         },
         {
-          title: 'Tasks',
+          title: 'تسک ها',
           url: '/tasks',
           icon: IconChecklist,
         },
         {
-          title: 'Apps',
+          title: 'برنامه ها',
           url: '/apps',
           icon: IconPackages,
         },
         {
-          title: 'Chats',
+          title: 'چت ها',
           url: '/chats',
           badge: '3',
           icon: IconMessages,
         },
         {
-          title: 'Users',
+          title: 'کاربران',
           url: '/users',
           icon: IconUsers,
         },
         {
-          title: 'Secured by Clerk',
+          title: 'محافظت شده توسط Clerk',
           icon: ClerkLogo,
           items: [
             {
-              title: 'Sign In',
+              title: 'ورود',
               url: '/clerk/sign-in',
             },
             {
-              title: 'Sign Up',
+              title: 'ثبت نام',
               url: '/clerk/sign-up',
             },
             {
-              title: 'User Management',
+              title: 'مدیریت کاربران',
               url: '/clerk/user-management',
             },
           ],
@@ -97,60 +97,60 @@ export const sidebarData: SidebarData = {
       ],
     },
     {
-      title: 'Pages',
+      title: 'صفحات',
       items: [
         {
-          title: 'Auth',
+          title: 'احراز هویت',
           icon: IconLockAccess,
           items: [
             {
-              title: 'Sign In',
+              title: 'ورود',
               url: '/sign-in',
             },
             {
-              title: 'Sign In (2 Col)',
+              title: 'ورود (2 ستون)',
               url: '/sign-in-2',
             },
             {
-              title: 'Sign Up',
+              title: 'ثبت نام',
               url: '/sign-up',
             },
             {
-              title: 'Forgot Password',
+              title: 'فراموشی رمز عبور',
               url: '/forgot-password',
             },
             {
-              title: 'OTP',
+              title: 'کد یکبار مصرف',
               url: '/otp',
             },
           ],
         },
         {
-          title: 'Errors',
+          title: 'خطاها',
           icon: IconBug,
           items: [
             {
-              title: 'Unauthorized',
+              title: 'غیرمجاز',
               url: '/401',
               icon: IconLock,
             },
             {
-              title: 'Forbidden',
+              title: 'ممنوع',
               url: '/403',
               icon: IconUserOff,
             },
             {
-              title: 'Not Found',
+              title: 'یافت نشد',
               url: '/404',
               icon: IconError404,
             },
             {
-              title: 'Internal Server Error',
+              title: 'خطای سرور داخلی',
               url: '/500',
               icon: IconServerOff,
             },
             {
-              title: 'Maintenance Error',
+              title: 'خطای نگهداری',
               url: '/503',
               icon: IconBarrierBlock,
             },
@@ -159,41 +159,41 @@ export const sidebarData: SidebarData = {
       ],
     },
     {
-      title: 'Other',
+      title: 'دیگر',
       items: [
         {
-          title: 'Settings',
+          title: 'تنظیمات',
           icon: IconSettings,
           items: [
             {
-              title: 'Profile',
+              title: 'پروفایل',
               url: '/settings',
               icon: IconUserCog,
             },
             {
-              title: 'Account',
+              title: 'حساب کاربری',
               url: '/settings/account',
               icon: IconTool,
             },
             {
-              title: 'Appearance',
+              title: 'ظاهر',
               url: '/settings/appearance',
               icon: IconPalette,
             },
             {
-              title: 'Notifications',
+              title: 'اعلانات',
               url: '/settings/notifications',
               icon: IconNotification,
             },
             {
-              title: 'Display',
+              title: 'نمایش',
               url: '/settings/display',
               icon: IconBrowserCheck,
             },
           ],
         },
         {
-          title: 'Help Center',
+          title: 'مرکز راهنما',
           url: '/help-center',
           icon: IconHelp,
         },

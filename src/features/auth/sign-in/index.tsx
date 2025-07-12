@@ -14,10 +14,10 @@ export default function SignIn() {
     <AuthLayout>
       <Card className='gap-4'>
         <CardHeader>
-          <CardTitle className='text-lg tracking-tight'>Login</CardTitle>
+          <CardTitle className='text-lg tracking-tight'>ورود</CardTitle>
           <CardDescription>
-            Enter your email and password below to <br />
-            log into your account
+            ایمیل و رمز عبور خود را در زیر وارد کنید تا <br />
+            وارد حساب کاربری خود شوید
           </CardDescription>
         </CardHeader>
         <CardContent>
@@ -25,21 +25,21 @@ export default function SignIn() {
         </CardContent>
         <CardFooter>
           <p className='text-muted-foreground px-8 text-center text-sm'>
-            By clicking login, you agree to our{' '}
+            با کلیک بر روی ورود، شما با{' '}
             <a
               href='/terms'
               className='hover:text-primary underline underline-offset-4'
             >
-              Terms of Service
+              شرایط خدمات
             </a>{' '}
-            and{' '}
+            و{' '}
             <a
               href='/privacy'
               className='hover:text-primary underline underline-offset-4'
             >
-              Privacy Policy
-            </a>
-            .
+              سیاست حفظ حریم خصوصی
+            </a>{' '}
+            ما موافقت می‌کنید.
           </p>
         </CardFooter>
       </Card>
