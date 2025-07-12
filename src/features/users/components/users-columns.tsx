@@ -87,7 +87,9 @@ export const columns: ColumnDef<User>[] = [
     header: ({ column }) => (
       <DataTableColumnHeader column={column} title='شماره تلفن' />
     ),
-    cell: ({ row }) => <div>{row.getValue('phoneNumber')}</div>,
+    cell: ({ row }) => (
+      <div className='dir-ltr text-end'>{row.getValue('phoneNumber')}</div>
+    ),
     enableSorting: false,
     meta: { title: 'شماره تلفن' },
   },
@@ -99,11 +101,11 @@ export const columns: ColumnDef<User>[] = [
     ),
     cell: ({ row }) => {
       const { status } = row.original
-      const badgeColor = callTypes.get(status)
+      const { className, label } = callTypes.get(status) ?? {}
       return (
         <div className='flex space-x-2'>
-          <Badge variant='outline' className={cn('capitalize', badgeColor)}>
-            {row.getValue('status')}
+          <Badge variant='outline' className={cn('capitalize', className)}>
+            {label}
           </Badge>
         </div>
       )
@@ -134,7 +136,7 @@ export const columns: ColumnDef<User>[] = [
           {userType.icon && (
             <userType.icon size={16} className='text-muted-foreground' />
           )}
-          <span className='text-sm capitalize'>{row.getValue('role')}</span>
+          <span className='text-sm capitalize'>{userType.label}</span>
         </div>
       )
     },
