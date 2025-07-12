@@ -22,20 +22,20 @@ const formSchema = z
   .object({
     email: z
       .string()
-      .min(1, { message: 'Please enter your email' })
-      .email({ message: 'Invalid email address' }),
+      .min(1, { message: 'لطفاً ایمیل خود را وارد کنید' })
+      .email({ message: 'آدرس ایمیل نامعتبر است' }),
     password: z
       .string()
       .min(1, {
-        message: 'Please enter your password',
+        message: 'لطفاً رمز عبور خود را وارد کنید',
       })
       .min(7, {
-        message: 'Password must be at least 7 characters long',
+        message: 'رمز عبور باید حداقل ۷ کاراکتر باشد',
       }),
     confirmPassword: z.string(),
   })
   .refine((data) => data.password === data.confirmPassword, {
-    message: "Passwords don't match.",
+    message: "رمزهای عبور مطابقت ندارند.",
     path: ['confirmPassword'],
   })
 
@@ -73,7 +73,7 @@ export function SignUpForm({ className, ...props }: SignUpFormProps) {
           name='email'
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Email</FormLabel>
+              <FormLabel>ایمیل</FormLabel>
               <FormControl>
                 <Input placeholder='name@example.com' {...field} />
               </FormControl>
@@ -86,7 +86,7 @@ export function SignUpForm({ className, ...props }: SignUpFormProps) {
           name='password'
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Password</FormLabel>
+              <FormLabel>رمز عبور</FormLabel>
               <FormControl>
                 <PasswordInput placeholder='********' {...field} />
               </FormControl>
@@ -99,7 +99,7 @@ export function SignUpForm({ className, ...props }: SignUpFormProps) {
           name='confirmPassword'
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Confirm Password</FormLabel>
+              <FormLabel>تأیید رمز عبور</FormLabel>
               <FormControl>
                 <PasswordInput placeholder='********' {...field} />
               </FormControl>
@@ -108,7 +108,7 @@ export function SignUpForm({ className, ...props }: SignUpFormProps) {
           )}
         />
         <Button className='mt-2' disabled={isLoading}>
-          Create Account
+          ایجاد حساب کاربری
         </Button>
 
         <div className='relative my-2'>
@@ -117,7 +117,7 @@ export function SignUpForm({ className, ...props }: SignUpFormProps) {
           </div>
           <div className='relative flex justify-center text-xs uppercase'>
             <span className='bg-background text-muted-foreground px-2'>
-              Or continue with
+              یا ادامه با
             </span>
           </div>
         </div>
@@ -129,7 +129,7 @@ export function SignUpForm({ className, ...props }: SignUpFormProps) {
             type='button'
             disabled={isLoading}
           >
-            <IconBrandGithub className='h-4 w-4' /> GitHub
+            <IconBrandGithub className='h-4 w-4' /> گیت‌هاب
           </Button>
           <Button
             variant='outline'
@@ -137,7 +137,7 @@ export function SignUpForm({ className, ...props }: SignUpFormProps) {
             type='button'
             disabled={isLoading}
           >
-            <IconBrandFacebook className='h-4 w-4' /> Facebook
+            <IconBrandFacebook className='h-4 w-4' /> فیس‌بوک
           </Button>
         </div>
       </form>

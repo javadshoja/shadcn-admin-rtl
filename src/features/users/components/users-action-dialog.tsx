@@ -79,7 +79,7 @@ const formSchema = z
       if (password !== confirmPassword) {
         ctx.addIssue({
           code: z.ZodIssueCode.custom,
-          message: 'رمزهای عبور باهم تطابق ند��رند.',
+          message: 'رمزهای عبور باهم تطابق ندارند.',
           path: ['confirmPassword'],
         })
       }

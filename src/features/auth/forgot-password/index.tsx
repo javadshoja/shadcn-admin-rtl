@@ -16,11 +16,11 @@ export default function ForgotPassword() {
       <Card className='gap-4'>
         <CardHeader>
           <CardTitle className='text-lg tracking-tight'>
-            Forgot Password
+            فراموشی رمز عبور
           </CardTitle>
           <CardDescription>
-            Enter your registered email and <br /> we will send you a link to
-            reset your password.
+            ایمیل ثبت‌نام شده خود را وارد کنید و <br /> ما لینکی برای بازنشانی
+            رمز عبور شما ارسال خواهیم کرد.
           </CardDescription>
         </CardHeader>
         <CardContent>
@@ -28,12 +28,12 @@ export default function ForgotPassword() {
         </CardContent>
         <CardFooter>
           <p className='text-muted-foreground px-8 text-center text-sm'>
-            Don't have an account?{' '}
+            حساب کاربری ندارید؟{' '}
             <Link
               to='/sign-up'
               className='hover:text-primary underline underline-offset-4'
             >
-              Sign up
+              ثبت‌نام کنید
             </Link>
             .
           </p>
