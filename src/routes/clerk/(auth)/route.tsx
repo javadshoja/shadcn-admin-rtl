@@ -35,7 +35,8 @@ function ClerkAuthLayout() {
         <div className='relative z-20 mt-auto'>
           <blockquote className='space-y-2'>
             <p className='text-lg'>
-              &ldquo; لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. &rdquo;
+              &ldquo; لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ
+              و با استفاده از طراحان گرافیک است. &rdquo;
             </p>
             <footer className='text-sm'>جان دو</footer>
           </blockquote>

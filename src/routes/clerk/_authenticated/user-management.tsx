@@ -59,7 +59,9 @@ function UserManagement() {
           <Main>
             <div className='mb-2 flex flex-wrap items-center justify-between space-y-2'>
               <div>
-                <h2 className='text-2xl font-bold tracking-tight'>لیست کاربران</h2>
+                <h2 className='text-2xl font-bold tracking-tight'>
+                  لیست کاربران
+                </h2>
                 <div className='flex gap-1'>
                   <p className='text-muted-foreground'>
                     کاربران و نقش‌های آن‌ها را در اینجا مدیریت کنید.
@@ -80,7 +82,8 @@ function UserManagement() {
                     </p>
 
                     <p className='mt-4'>
-                      می‌توانید از طریق منوی پروفایل کاربر در گوشه بالا سمت راست صفحه، از سیستم خارج شوید یا حساب خود را مدیریت/حذف کنید.
+                      می‌توانید از طریق منوی پروفایل کاربر در گوشه بالا سمت راست
+                      صفحه، از سیستم خارج شوید یا حساب خود را مدیریت/حذف کنید.
                       <IconArrowUpRight className='inline-block size-4' />
                     </p>
                   </LearnMore>
@@ -144,10 +147,14 @@ function Unauthorized() {
                 </Link>
                 .{' '}
               </p>
-              <p>برای دسترسی به این مسیر، ابتدا باید با استفاده از Clerk وارد شوید. </p>
+              <p>
+                برای دسترسی به این مسیر، ابتدا باید با استفاده از Clerk وارد
+                شوید.{' '}
+              </p>
 
               <p className='mt-4'>
-                پس از ورود، می‌توانید از طریق منوی کشویی پروفایل کاربر در این صفحه، از سیستم خارج شوید یا حساب خود را حذف کنید.
+                پس از ورود، می‌توانید از طریق منوی کشویی پروفایل کاربر در این
+                صفحه، از سیستم خارج شوید یا حساب خود را حذف کنید.
               </p>
             </LearnMore>
           </sup>
