@@ -35,7 +35,7 @@ const formSchema = z
     confirmPassword: z.string(),
   })
   .refine((data) => data.password === data.confirmPassword, {
-    message: "رمزهای عبور مطابقت ندارند.",
+    message: 'رمزهای عبور مطابقت ندارند.',
     path: ['confirmPassword'],
   })
 

@@ -19,7 +19,8 @@ export default function Otp() {
             احراز هویت دو مرحله‌ای
           </CardTitle>
           <CardDescription>
-            لطفاً کد احراز هویت را وارد کنید. <br /> ما کد احراز هویت را به ایمیل شما ارسال کرده‌ایم.
+            لطفاً کد احراز هویت را وارد کنید. <br /> ما کد احراز هویت را به
+            ایمیل شما ارسال کرده‌ایم.
           </CardDescription>
         </CardHeader>
         <CardContent>
