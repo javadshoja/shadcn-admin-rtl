@@ -7,6 +7,7 @@ import {
   QueryClientProvider,
 } from '@tanstack/react-query'
 import { RouterProvider, createRouter } from '@tanstack/react-router'
+import { initToolbar } from '@stagewise/toolbar'
 import { toast } from 'sonner'
 import { useAuthStore } from '@/stores/authStore'
 import { handleServerError } from '@/utils/handle-server-error'
@@ -80,6 +81,13 @@ declare module '@tanstack/react-router' {
   interface Register {
     router: typeof router
   }
+}
+
+// Initialize stagewise toolbar in development mode
+if (import.meta.env.DEV) {
+  initToolbar({
+    plugins: [],
+  })
 }
 
 // Render the app
