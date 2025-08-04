@@ -51,11 +51,11 @@ export function NewChat({ users, onOpenChange, open }: Props) {
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className='sm:max-w-[600px]'>
         <DialogHeader>
-          <DialogTitle>New message</DialogTitle>
+          <DialogTitle>پیام جدید</DialogTitle>
         </DialogHeader>
         <div className='flex flex-col gap-4'>
           <div className='flex flex-wrap items-center gap-2'>
-            <span className='text-muted-foreground text-sm'>To:</span>
+            <span className='text-muted-foreground text-sm'>به:</span>
             {selectedUsers.map((user) => (
               <Badge key={user.id} variant='default'>
                 {user.fullName}
@@ -75,11 +75,11 @@ export function NewChat({ users, onOpenChange, open }: Props) {
           </div>
           <Command className='rounded-lg border'>
             <CommandInput
-              placeholder='Search people...'
+              placeholder='جستجوی افراد...'
               className='text-foreground'
             />
             <CommandList>
-              <CommandEmpty>No people found.</CommandEmpty>
+              <CommandEmpty>هیچ فردی یافت نشد.</CommandEmpty>
               <CommandGroup>
                 {users.map((user) => (
                   <CommandItem
@@ -98,7 +98,7 @@ export function NewChat({ users, onOpenChange, open }: Props) {
                           {user.fullName}
                         </span>
                         <span className='text-muted-foreground text-xs'>
-                          {user.username} aa
+                          {user.username}
                         </span>
                       </div>
                     </div>
@@ -116,7 +116,7 @@ export function NewChat({ users, onOpenChange, open }: Props) {
             onClick={() => showSubmittedData(selectedUsers)}
             disabled={selectedUsers.length === 0}
           >
-            Chat
+            چت
           </Button>
         </div>
       </DialogContent>

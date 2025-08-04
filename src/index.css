@@ -67,6 +67,7 @@
 
 @theme inline {
   --font-inter: 'Inter', 'sans-serif';
+  --font-vazirmatn: 'Vazirmatn', 'sans-serif';
   --font-manrope: 'Manrope', 'sans-serif';
 
   --radius-sm: calc(var(--radius) - 4px);
@@ -136,6 +137,10 @@
   }
 }
 
+@utility dir-ltr {
+  direction: ltr !important;
+}
+
 @utility container {
   margin-inline: auto;
   padding-inline: 2rem;
@@ -152,7 +157,7 @@
 }
 
 @utility faded-bottom {
-  @apply after:pointer-events-none after:absolute after:bottom-0 after:right-0 after:hidden after:h-32 after:w-full after:bg-[linear-gradient(180deg,_transparent_10%,_var(--background)_70%)] md:after:block;
+  @apply after:pointer-events-none after:absolute after:right-0 after:bottom-0 after:hidden after:h-32 after:w-full after:bg-[linear-gradient(180deg,_transparent_10%,_var(--background)_70%)] md:after:block;
 }
 
 /* styles.css */

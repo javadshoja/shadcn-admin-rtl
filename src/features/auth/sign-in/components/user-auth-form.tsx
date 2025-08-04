@@ -22,15 +22,15 @@ type UserAuthFormProps = HTMLAttributes<HTMLFormElement>
 const formSchema = z.object({
   email: z
     .string()
-    .min(1, { message: 'Please enter your email' })
-    .email({ message: 'Invalid email address' }),
+    .min(1, { message: 'لطفاً ایمیل خود را وارد کنید' })
+    .email({ message: 'آدرس ایمیل نامعتبر است' }),
   password: z
     .string()
     .min(1, {
-      message: 'Please enter your password',
+      message: 'لطفاً رمز عبور خود را وارد کنید',
     })
     .min(7, {
-      message: 'Password must be at least 7 characters long',
+      message: 'رمز عبور باید حداقل ۷ کاراکتر باشد',
     }),
 })
 
@@ -67,7 +67,7 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
           name='email'
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Email</FormLabel>
+              <FormLabel>ایمیل</FormLabel>
               <FormControl>
                 <Input placeholder='name@example.com' {...field} />
               </FormControl>
@@ -80,22 +80,22 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
           name='password'
           render={({ field }) => (
             <FormItem className='relative'>
-              <FormLabel>Password</FormLabel>
+              <FormLabel>رمز عبور</FormLabel>
               <FormControl>
                 <PasswordInput placeholder='********' {...field} />
               </FormControl>
               <FormMessage />
               <Link
                 to='/forgot-password'
-                className='text-muted-foreground absolute -top-0.5 right--0 text-sm font-medium hover:opacity-75'
+                className='text-muted-foreground right--0 absolute -top-0.5 text-sm font-medium hover:opacity-75'
               >
-                Forgot password?
+                رمز عبور را فراموش کرده‌اید؟
               </Link>
             </FormItem>
           )}
         />
         <Button className='mt-2' disabled={isLoading}>
-          Login
+          ورود
         </Button>
 
         <div className='relative my-2'>
@@ -104,17 +104,17 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
           </div>
           <div className='relative flex justify-center text-xs uppercase'>
             <span className='bg-background text-muted-foreground px-2'>
-              Or continue with
+              یا ادامه با
             </span>
           </div>
         </div>
 
         <div className='grid grid-cols-2 gap-2'>
           <Button variant='outline' type='button' disabled={isLoading}>
-            <IconBrandGithub className='h-4 w-4' /> GitHub
+            <IconBrandGithub className='h-4 w-4' /> گیت‌هاب
           </Button>
           <Button variant='outline' type='button' disabled={isLoading}>
-            <IconBrandFacebook className='h-4 w-4' /> Facebook
+            <IconBrandFacebook className='h-4 w-4' /> فیس‌بوک
           </Button>
         </div>
       </form>

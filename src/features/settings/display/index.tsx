@@ -4,8 +4,8 @@ import { DisplayForm } from './display-form'
 export default function SettingsDisplay() {
   return (
     <ContentSection
-      title='Display'
-      desc="Turn items on or off to control what's displayed in the app."
+      title='نمایش'
+      desc='موارد را روشن یا خاموش کنید تا کنترل کنید چه چیزی در برنامه نمایش داده شود.'
     >
       <DisplayForm />
     </ContentSection>

@@ -29,7 +29,8 @@ import { DataTableToolbar } from './data-table-toolbar'
 declare module '@tanstack/react-table' {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   interface ColumnMeta<TData extends RowData, TValue> {
-    className: string
+    className?: string
+    title?: string
   }
 }
 
@@ -68,7 +69,7 @@ export function UsersTable({ columns, data }: DataTableProps) {
 
   return (
     <div className='space-y-4'>
-      <DataTableToolbar table={table} />
+      <DataTableToolbar table={table} columns={columns} />
       <div className='rounded-md border'>
         <Table>
           <TableHeader>
@@ -120,7 +121,7 @@ export function UsersTable({ columns, data }: DataTableProps) {
                   colSpan={columns.length}
                   className='h-24 text-center'
                 >
-                  No results.
+                  نتیجه‌ای یافت نشد.
                 </TableCell>
               </TableRow>
             )}

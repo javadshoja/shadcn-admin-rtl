@@ -47,20 +47,22 @@ function MissingClerkPubKey() {
         <div className='max-w-2xl'>
           <Alert>
             <IconKeyOff className='size-4' />
-            <AlertTitle>No Publishable Key Found!</AlertTitle>
+            <AlertTitle>کلید قابل انتشار یافت نشد!</AlertTitle>
             <AlertDescription>
               <p className='text-balance'>
-                You need to generate a publishable key from Clerk and put it
-                inside the <code className={codeBlock}>.env</code> file.
+                شما باید یک کلید قابل انتشار از Clerk تولید کرده و آن را داخل
+                فایل <code className={codeBlock}>.env</code> قرار دهید.
               </p>
             </AlertDescription>
           </Alert>
 
-          <h1 className='mt-4 text-2xl font-bold'>Set your Clerk API key</h1>
+          <h1 className='mt-4 text-2xl font-bold'>
+            کلید API Clerk خود را تنظیم کنید
+          </h1>
           <div className='text-foreground/75 mt-4 flex flex-col gap-y-4'>
             <ol className='list-inside list-decimal space-y-1.5'>
               <li>
-                In the{' '}
+                در{' '}
                 <a
                   href='https://go.clerk.com/GttUAaK'
                   target='_blank'
@@ -71,24 +73,27 @@ function MissingClerkPubKey() {
                     <IconExternalLink className='inline-block size-4' />
                   </sup>
                 </a>{' '}
-                Dashboard, navigate to the API keys page.
+                داشبورد، به صفحه کلیدهای API بروید.
               </li>
               <li>
-                In the <strong>Quick Copy</strong> section, copy your Clerk
-                Publishable Key.
+                در بخش <strong>کپی سریع</strong>، کلید قابل انتشار Clerk خود را
+                کپی کنید.
               </li>
               <li>
-                Rename <code className={codeBlock}>.env.example</code> to{' '}
-                <code className={codeBlock}>.env</code>
+                نام <code className={codeBlock}>.env.example</code> را به{' '}
+                <code className={codeBlock}>.env</code> تغییر دهید.
               </li>
               <li>
-                Paste your key into your <code className={codeBlock}>.env</code>{' '}
-                file.
+                کلید خود را در فایل <code className={codeBlock}>.env</code> خود
+                جایگذاری کنید.
               </li>
             </ol>
-            <p>The final result should resemble the following:</p>
+            <p>نتیجه نهایی باید شبیه به موارد زیر باشد:</p>
 
-            <div className='@container space-y-2 rounded-md bg-slate-800 px-3 py-3 text-sm text-slate-200'>
+            <div
+              className='@container space-y-2 rounded-md bg-slate-800 px-3 py-3 text-sm text-slate-200'
+              dir='ltr'
+            >
               <span className='pr-1'>.env</span>
               <pre className='overflow-auto overscroll-x-contain rounded bg-slate-950 px-2 py-1 text-xs'>
                 <code>
@@ -103,23 +108,25 @@ function MissingClerkPubKey() {
           <Separator className='my-4 w-full' />
 
           <Alert>
-            <AlertTitle>Clerk Integration is Optional</AlertTitle>
+            <AlertTitle>ادغام Clerk اختیاری است</AlertTitle>
             <AlertDescription>
               <p className='text-balance'>
-                The Clerk integration lives entirely inside{' '}
-                <code className={codeBlock}>src/routes/clerk</code>. If you plan
-                to use Clerk as your auth service, you might want to place{' '}
-                <code className={codeBlock}>ClerkProvider</code> at the root
-                route.
+                ادغام Clerk به طور کامل در{' '}
+                <code className={codeBlock}>src/routes/clerk</code> قرار دارد.
+                اگر قصد دارید از Clerk به عنوان سرویس احراز هویت خود استفاده
+                کنید، ممکن است بخواهید{' '}
+                <code className={codeBlock}>ClerkProvider</code> را در مسیر اصلی
+                قرار دهید.
               </p>
               <p>
-                However, if you don't plan to use Clerk, you can safely remove
-                this directory and related dependency_{' '}
-                <code className={codeBlock}>@clerk/clerk-react</code>.
+                با این حال، اگر قصد استفاده از Clerk را ندارید، می‌توانید این
+                دایرکتوری و وابستگی‌های مرتبط{' '}
+                <code className={codeBlock}>@clerk/clerk-react</code> را با خیال
+                راحت حذف کنید.
               </p>
               <p className='mt-2 text-sm'>
-                This setup is modular by design and won't affect the rest of the
-                application.
+                این تنظیمات به صورت ماژولار طراحی شده و بر بقیه برنامه تأثیری
+                نخواهد گذاشت.
               </p>
             </AlertDescription>
           </Alert>

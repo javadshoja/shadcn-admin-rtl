@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { Fragment } from 'react/jsx-runtime'
-import { format } from 'date-fns'
 import {
   IconArrowLeft,
   IconDotsVertical,
@@ -14,6 +13,7 @@ import {
   IconSend,
   IconVideo,
 } from '@tabler/icons-react'
+import { format } from 'date-fns-jalali'
 import { cn } from '@/lib/utils'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { Button } from '@/components/ui/button'
@@ -45,7 +45,7 @@ export default function Chats() {
 
   const currentMessage = selectedUser?.messages.reduce(
     (acc: Record<string, Convo[]>, obj) => {
-      const key = format(obj.timestamp, 'd MMM, yyyy')
+      const key = format(obj.timestamp, 'd MMMM, yyyy')
 
       // Create an array for the category if it doesn't exist
       if (!acc[key]) {
@@ -80,7 +80,7 @@ export default function Chats() {
             <div className='bg-background sticky top-0 z-10 -mx-4 px-4 pb-3 shadow-md sm:static sm:z-auto sm:mx-0 sm:p-0 sm:shadow-none'>
               <div className='flex items-center justify-between py-2'>
                 <div className='flex gap-2'>
-                  <h1 className='text-2xl font-bold'>Inbox</h1>
+                  <h1 className='text-2xl font-bold'>پیام‌ها</h1>
                   <IconMessages size={20} />
                 </div>
 
@@ -96,11 +96,11 @@ export default function Chats() {
 
               <label className='border-input focus-within:ring-ring flex h-12 w-full items-center space-x-0 rounded-md border pr-2 focus-within:ring-1 focus-within:outline-hidden'>
                 <IconSearch size={15} className='ml-2 stroke-slate-500' />
-                <span className='sr-only'>Search</span>
+                <span className='sr-only'>جستجو</span>
                 <input
                   type='text'
                   className='w-full flex-1 bg-inherit text-sm focus-visible:outline-hidden'
-                  placeholder='Search chat...'
+                  placeholder='جستجو در چت...'
                   value={search}
                   onChange={(e) => setSearch(e.target.value)}
                 />
@@ -112,15 +112,16 @@ export default function Chats() {
                 const { id, profile, username, messages, fullName } = chatUsr
                 const lastConvo = messages[0]
                 const lastMsg =
-                  lastConvo.sender === 'You'
-                    ? `You: ${lastConvo.message}`
+                  lastConvo.sender === 'شما'
+                    ? `شما: ${lastConvo.message}`
                     : lastConvo.message
                 return (
                   <Fragment key={id}>
                     <button
                       type='button'
+                      dir='rtl'
                       className={cn(
-                        `hover:bg-secondary/75 -mx-1 flex w-full rounded-md px-2 py-2 text-left text-sm`,
+                        `hover:bg-secondary/75 -mx-1 flex w-full rounded-md px-2 py-2 text-right text-sm`,
                         selectedUser?.id === id && 'sm:bg-muted'
                       )}
                       onClick={() => {
@@ -219,7 +220,7 @@ export default function Chats() {
               <div className='flex flex-1 flex-col gap-2 rounded-md px-4 pt-0 pb-4'>
                 <div className='flex size-full flex-1'>
                   <div className='chat-text-container relative -ml-4 flex flex-1 flex-col overflow-y-hidden'>
-                    <div className='chat-flex flex h-40 w-full grow flex-col-reverse justify-start gap-4 overflow-y-auto py-2 pl-4 pb-4'>
+                    <div className='chat-flex flex h-40 w-full grow flex-col-reverse justify-start gap-4 overflow-y-auto py-2 pb-4 pl-4'>
                       {currentMessage &&
                         Object.keys(currentMessage).map((key) => (
                           <Fragment key={key}>
@@ -237,7 +238,7 @@ export default function Chats() {
                                 <span
                                   className={cn(
                                     'text-muted-foreground mt-1 block text-xs font-light italic',
-                                    msg.sender === 'You' && 'text-right'
+                                    msg.sender === 'You' && 'text-left'
                                   )}
                                 >
                                   {format(msg.timestamp, 'h:mm a')}
@@ -288,10 +289,10 @@ export default function Chats() {
                       </Button>
                     </div>
                     <label className='flex-1'>
-                      <span className='sr-only'>Chat Text Box</span>
+                      <span className='sr-only'>محل نوشتن پیام</span>
                       <input
                         type='text'
-                        placeholder='Type your messages...'
+                        placeholder='نوشتن پیام...'
                         className='h-8 w-full bg-inherit focus-visible:outline-hidden'
                       />
                     </label>
@@ -300,11 +301,11 @@ export default function Chats() {
                       size='icon'
                       className='hidden sm:inline-flex'
                     >
-                      <IconSend size={20} />
+                      <IconSend size={20} className='rotate-270' />
                     </Button>
                   </div>
                   <Button className='h-full sm:hidden'>
-                    <IconSend size={18} /> Send
+                    <IconSend size={18} className='rotate-270' /> ارسال
                   </Button>
                 </form>
               </div>
@@ -312,7 +313,7 @@ export default function Chats() {
           ) : (
             <div
               className={cn(
-                'bg-primary-foreground absolute inset-0 right--full z-50 hidden w-full flex-1 flex-col justify-center rounded-md border shadow-xs transition-all duration-200 sm:static sm:z-auto sm:flex'
+                'bg-primary-foreground right--full absolute inset-0 z-50 hidden w-full flex-1 flex-col justify-center rounded-md border shadow-xs transition-all duration-200 sm:static sm:z-auto sm:flex'
               )}
             >
               <div className='flex flex-col items-center space-y-6'>
@@ -320,16 +321,16 @@ export default function Chats() {
                   <IconMessages className='size-8' />
                 </div>
                 <div className='space-y-2 text-center'>
-                  <h1 className='text-xl font-semibold'>Your messages</h1>
+                  <h1 className='text-xl font-semibold'>پیام‌های شما</h1>
                   <p className='text-muted-foreground text-sm'>
-                    Send a message to start a chat.
+                    یک پیام برای شروع چت ارسال کنید.
                   </p>
                 </div>
                 <Button
                   className='bg-blue-500 px-6 text-white hover:bg-blue-600'
                   onClick={() => setCreateConversationDialog(true)}
                 >
-                  Send message
+                  ارسال پیام
                 </Button>
               </div>
             </div>

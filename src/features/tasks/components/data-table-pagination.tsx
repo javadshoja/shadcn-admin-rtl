@@ -27,12 +27,12 @@ export function DataTablePagination<TData>({
       style={{ overflowClipMargin: 1 }}
     >
       <div className='text-muted-foreground hidden flex-1 text-sm sm:block'>
-        {table.getFilteredSelectedRowModel().rows.length} of{' '}
-        {table.getFilteredRowModel().rows.length} row(s) selected.
+        {table.getFilteredSelectedRowModel().rows.length} از{' '}
+        {table.getFilteredRowModel().rows.length} ردیف انتخاب شده.
       </div>
       <div className='flex items-center sm:space-x-6 lg:space-x-8'>
         <div className='flex items-center space-x-2'>
-          <p className='hidden text-sm font-medium sm:block'>Rows per page</p>
+          <p className='hidden text-sm font-medium sm:block'>ردیف در صفحه</p>
           <Select
             value={`${table.getState().pagination.pageSize}`}
             onValueChange={(value) => {
@@ -52,7 +52,7 @@ export function DataTablePagination<TData>({
           </Select>
         </div>
         <div className='flex w-[100px] items-center justify-center text-sm font-medium'>
-          Page {table.getState().pagination.pageIndex + 1} of{' '}
+          صفحه {table.getState().pagination.pageIndex + 1} از{' '}
           {table.getPageCount()}
         </div>
         <div className='flex items-center space-x-2'>
@@ -62,8 +62,8 @@ export function DataTablePagination<TData>({
             onClick={() => table.setPageIndex(0)}
             disabled={!table.getCanPreviousPage()}
           >
-            <span className='sr-only'>Go to first page</span>
-            <DoubleArrowLeftIcon className='h-4 w-4' />
+            <span className='sr-only'>رفتن به صفحه اول</span>
+            <DoubleArrowRightIcon className='h-4 w-4' />
           </Button>
           <Button
             variant='outline'
@@ -71,8 +71,8 @@ export function DataTablePagination<TData>({
             onClick={() => table.previousPage()}
             disabled={!table.getCanPreviousPage()}
           >
-            <span className='sr-only'>Go to previous page</span>
-            <ChevronLeftIcon className='h-4 w-4' />
+            <span className='sr-only'>رفتن به صفحه قبل</span>
+            <ChevronRightIcon className='h-4 w-4' />
           </Button>
           <Button
             variant='outline'
@@ -80,8 +80,8 @@ export function DataTablePagination<TData>({
             onClick={() => table.nextPage()}
             disabled={!table.getCanNextPage()}
           >
-            <span className='sr-only'>Go to next page</span>
-            <ChevronRightIcon className='h-4 w-4' />
+            <span className='sr-only'>رفتن به صفحه بعد</span>
+            <ChevronLeftIcon className='h-4 w-4' />
           </Button>
           <Button
             variant='outline'
@@ -89,8 +89,8 @@ export function DataTablePagination<TData>({
             onClick={() => table.setPageIndex(table.getPageCount() - 1)}
             disabled={!table.getCanNextPage()}
           >
-            <span className='sr-only'>Go to last page</span>
-            <DoubleArrowRightIcon className='h-4 w-4' />
+            <span className='sr-only'>رفتن به صفحه آخر</span>
+            <DoubleArrowLeftIcon className='h-4 w-4' />
           </Button>
         </div>
       </div>

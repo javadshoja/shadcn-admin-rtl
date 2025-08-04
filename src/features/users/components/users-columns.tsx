@@ -18,7 +18,7 @@ export const columns: ColumnDef<User>[] = [
           (table.getIsSomePageRowsSelected() && 'indeterminate')
         }
         onCheckedChange={(value) => table.toggleAllPageRowsSelected(!!value)}
-        aria-label='Select all'
+        aria-label='انتخاب همه'
         className='translate-y-[2px]'
       />
     ),
@@ -32,7 +32,7 @@ export const columns: ColumnDef<User>[] = [
       <Checkbox
         checked={row.getIsSelected()}
         onCheckedChange={(value) => row.toggleSelected(!!value)}
-        aria-label='Select row'
+        aria-label='انتخاب ردیف'
         className='translate-y-[2px]'
       />
     ),
@@ -41,8 +41,9 @@ export const columns: ColumnDef<User>[] = [
   },
   {
     accessorKey: 'username',
+    id: 'username',
     header: ({ column }) => (
-      <DataTableColumnHeader column={column} title='Username' />
+      <DataTableColumnHeader column={column} title='نام کاربری' />
     ),
     cell: ({ row }) => (
       <LongText className='max-w-36'>{row.getValue('username')}</LongText>
@@ -53,50 +54,58 @@ export const columns: ColumnDef<User>[] = [
         'bg-background transition-colors duration-200 group-hover/row:bg-muted group-data-[state=selected]/row:bg-muted',
         'sticky right--6 md:table-cell'
       ),
+      title: 'نام کاربری',
     },
     enableHiding: false,
   },
   {
     id: 'fullName',
     header: ({ column }) => (
-      <DataTableColumnHeader column={column} title='Name' />
+      <DataTableColumnHeader column={column} title='نام' />
     ),
     cell: ({ row }) => {
       const { firstName, lastName } = row.original
       const fullName = `${firstName} ${lastName}`
       return <LongText className='max-w-36'>{fullName}</LongText>
     },
-    meta: { className: 'w-36' },
+    meta: { className: 'w-36', title: 'نام' },
   },
   {
+    id: 'email',
     accessorKey: 'email',
     header: ({ column }) => (
-      <DataTableColumnHeader column={column} title='Email' />
+      <DataTableColumnHeader column={column} title='ایمیل' />
     ),
     cell: ({ row }) => (
       <div className='w-fit text-nowrap'>{row.getValue('email')}</div>
     ),
+    meta: { title: 'ایمیل' },
   },
   {
+    id: 'phoneNumber',
     accessorKey: 'phoneNumber',
     header: ({ column }) => (
-      <DataTableColumnHeader column={column} title='Phone Number' />
+      <DataTableColumnHeader column={column} title='شماره تلفن' />
     ),
-    cell: ({ row }) => <div>{row.getValue('phoneNumber')}</div>,
+    cell: ({ row }) => (
+      <div className='dir-ltr text-end'>{row.getValue('phoneNumber')}</div>
+    ),
     enableSorting: false,
+    meta: { title: 'شماره تلفن' },
   },
   {
     accessorKey: 'status',
+    id: 'status',
     header: ({ column }) => (
-      <DataTableColumnHeader column={column} title='Status' />
+      <DataTableColumnHeader column={column} title='وضعیت' />
     ),
     cell: ({ row }) => {
       const { status } = row.original
-      const badgeColor = callTypes.get(status)
+      const { className, label } = callTypes.get(status) ?? {}
       return (
         <div className='flex space-x-2'>
-          <Badge variant='outline' className={cn('capitalize', badgeColor)}>
-            {row.getValue('status')}
+          <Badge variant='outline' className={cn('capitalize', className)}>
+            {label}
           </Badge>
         </div>
       )
@@ -106,11 +115,13 @@ export const columns: ColumnDef<User>[] = [
     },
     enableHiding: false,
     enableSorting: false,
+    meta: { title: 'وضعیت' },
   },
   {
     accessorKey: 'role',
+    id: 'role',
     header: ({ column }) => (
-      <DataTableColumnHeader column={column} title='Role' />
+      <DataTableColumnHeader column={column} title='نقش' />
     ),
     cell: ({ row }) => {
       const { role } = row.original
@@ -125,7 +136,7 @@ export const columns: ColumnDef<User>[] = [
           {userType.icon && (
             <userType.icon size={16} className='text-muted-foreground' />
           )}
-          <span className='text-sm capitalize'>{row.getValue('role')}</span>
+          <span className='text-sm capitalize'>{userType.label}</span>
         </div>
       )
     },
@@ -134,6 +145,7 @@ export const columns: ColumnDef<User>[] = [
     },
     enableSorting: false,
     enableHiding: false,
+    meta: { title: 'نقش' },
   },
   {
     id: 'actions',

@@ -29,16 +29,16 @@ import { User } from '../data/schema'
 
 const formSchema = z
   .object({
-    firstName: z.string().min(1, { message: 'First Name is required.' }),
-    lastName: z.string().min(1, { message: 'Last Name is required.' }),
-    username: z.string().min(1, { message: 'Username is required.' }),
-    phoneNumber: z.string().min(1, { message: 'Phone number is required.' }),
+    firstName: z.string().min(1, { message: 'نام کوچک الزامی است.' }),
+    lastName: z.string().min(1, { message: 'نام خانوادگی الزامی است.' }),
+    username: z.string().min(1, { message: 'نام کاربری الزامی است.' }),
+    phoneNumber: z.string().min(1, { message: 'شماره تلفن الزامی است.' }),
     email: z
       .string()
-      .min(1, { message: 'Email is required.' })
-      .email({ message: 'Email is invalid.' }),
+      .min(1, { message: 'ایمیل الزامی است.' })
+      .email({ message: 'ایمیل نامعتبر است.' }),
     password: z.string().transform((pwd) => pwd.trim()),
-    role: z.string().min(1, { message: 'Role is required.' }),
+    role: z.string().min(1, { message: 'نقش الزامی است.' }),
     confirmPassword: z.string().transform((pwd) => pwd.trim()),
     isEdit: z.boolean(),
   })
@@ -47,7 +47,7 @@ const formSchema = z
       if (password === '') {
         ctx.addIssue({
           code: z.ZodIssueCode.custom,
-          message: 'Password is required.',
+          message: 'رمز عبور الزامی است.',
           path: ['password'],
         })
       }
@@ -55,7 +55,7 @@ const formSchema = z
       if (password.length < 8) {
         ctx.addIssue({
           code: z.ZodIssueCode.custom,
-          message: 'Password must be at least 8 characters long.',
+          message: 'رمز عبور باید حداقل ۸ کاراکتر باشد.',
           path: ['password'],
         })
       }
@@ -63,7 +63,7 @@ const formSchema = z
       if (!password.match(/[a-z]/)) {
         ctx.addIssue({
           code: z.ZodIssueCode.custom,
-          message: 'Password must contain at least one lowercase letter.',
+          message: 'رمز عبور باید حداقل یک حرف کوچک انگلیسی داشته باشد.',
           path: ['password'],
         })
       }
@@ -71,7 +71,7 @@ const formSchema = z
       if (!password.match(/\d/)) {
         ctx.addIssue({
           code: z.ZodIssueCode.custom,
-          message: 'Password must contain at least one number.',
+          message: 'رمز عبور باید حداقل یک عدد داشته باشد.',
           path: ['password'],
         })
       }
@@ -79,7 +79,7 @@ const formSchema = z
       if (password !== confirmPassword) {
         ctx.addIssue({
           code: z.ZodIssueCode.custom,
-          message: "Passwords don't match.",
+          message: 'رمزهای عبور باهم تطابق ندارند.',
           path: ['confirmPassword'],
         })
       }
@@ -134,11 +134,15 @@ export function UsersActionDialog({ currentRow, open, onOpenChange }: Props) {
       }}
     >
       <DialogContent className='sm:max-w-lg'>
-        <DialogHeader className='text-left'>
-          <DialogTitle>{isEdit ? 'Edit User' : 'Add New User'}</DialogTitle>
+        <DialogHeader className='text-right'>
+          <DialogTitle>
+            {isEdit ? 'ویرایش کاربر' : 'افزودن کاربر جدید'}
+          </DialogTitle>
           <DialogDescription>
-            {isEdit ? 'Update the user here. ' : 'Create new user here. '}
-            Click save when you&apos;re done.
+            {isEdit
+              ? 'کاربر را در اینجا به‌روزرسانی کنید. '
+              : 'کاربر جدید را در اینجا ایجاد کنید. '}
+            وقتی کارتان تمام شد روی ذخیره کلیک کنید.
           </DialogDescription>
         </DialogHeader>
         <div className='-ml-4 h-[26.25rem] w-full overflow-y-auto py-1 pl-4'>
@@ -153,12 +157,12 @@ export function UsersActionDialog({ currentRow, open, onOpenChange }: Props) {
                 name='firstName'
                 render={({ field }) => (
                   <FormItem className='grid grid-cols-6 items-center space-y-0 gap-x-4 gap-y-1'>
-                    <FormLabel className='col-span-2 text-right'>
-                      First Name
+                    <FormLabel className='col-span-2 text-left'>
+                      نام کوچک
                     </FormLabel>
                     <FormControl>
                       <Input
-                        placeholder='John'
+                        placeholder='علی'
                         className='col-span-4'
                         autoComplete='off'
                         {...field}
@@ -173,12 +177,12 @@ export function UsersActionDialog({ currentRow, open, onOpenChange }: Props) {
                 name='lastName'
                 render={({ field }) => (
                   <FormItem className='grid grid-cols-6 items-center space-y-0 gap-x-4 gap-y-1'>
-                    <FormLabel className='col-span-2 text-right'>
-                      Last Name
+                    <FormLabel className='col-span-2 text-left'>
+                      نام خانوادگی
                     </FormLabel>
                     <FormControl>
                       <Input
-                        placeholder='Doe'
+                        placeholder='محمدی'
                         className='col-span-4'
                         autoComplete='off'
                         {...field}
@@ -193,12 +197,12 @@ export function UsersActionDialog({ currentRow, open, onOpenChange }: Props) {
                 name='username'
                 render={({ field }) => (
                   <FormItem className='grid grid-cols-6 items-center space-y-0 gap-x-4 gap-y-1'>
-                    <FormLabel className='col-span-2 text-right'>
-                      Username
+                    <FormLabel className='col-span-2 text-left'>
+                      نام کاربری
                     </FormLabel>
                     <FormControl>
                       <Input
-                        placeholder='john_doe'
+                        placeholder='ali_mohammadi'
                         className='col-span-4'
                         {...field}
                       />
@@ -212,12 +216,12 @@ export function UsersActionDialog({ currentRow, open, onOpenChange }: Props) {
                 name='email'
                 render={({ field }) => (
                   <FormItem className='grid grid-cols-6 items-center space-y-0 gap-x-4 gap-y-1'>
-                    <FormLabel className='col-span-2 text-right'>
-                      Email
+                    <FormLabel className='col-span-2 text-left'>
+                      ایمیل
                     </FormLabel>
                     <FormControl>
                       <Input
-                        placeholder='john.doe@gmail.com'
+                        placeholder='ali.mohammadi@gmail.com'
                         className='col-span-4'
                         {...field}
                       />
@@ -231,12 +235,12 @@ export function UsersActionDialog({ currentRow, open, onOpenChange }: Props) {
                 name='phoneNumber'
                 render={({ field }) => (
                   <FormItem className='grid grid-cols-6 items-center space-y-0 gap-x-4 gap-y-1'>
-                    <FormLabel className='col-span-2 text-right'>
-                      Phone Number
+                    <FormLabel className='col-span-2 text-left'>
+                      شماره تلفن
                     </FormLabel>
                     <FormControl>
                       <Input
-                        placeholder='+123456789'
+                        placeholder='+98123456789'
                         className='col-span-4'
                         {...field}
                       />
@@ -250,13 +254,11 @@ export function UsersActionDialog({ currentRow, open, onOpenChange }: Props) {
                 name='role'
                 render={({ field }) => (
                   <FormItem className='grid grid-cols-6 items-center space-y-0 gap-x-4 gap-y-1'>
-                    <FormLabel className='col-span-2 text-right'>
-                      Role
-                    </FormLabel>
+                    <FormLabel className='col-span-2 text-left'>نقش</FormLabel>
                     <SelectDropdown
                       defaultValue={field.value}
                       onValueChange={field.onChange}
-                      placeholder='Select a role'
+                      placeholder='یک نقش انتخاب کنید'
                       className='col-span-4'
                       items={userTypes.map(({ label, value }) => ({
                         label,
@@ -272,12 +274,12 @@ export function UsersActionDialog({ currentRow, open, onOpenChange }: Props) {
                 name='password'
                 render={({ field }) => (
                   <FormItem className='grid grid-cols-6 items-center space-y-0 gap-x-4 gap-y-1'>
-                    <FormLabel className='col-span-2 text-right'>
-                      Password
+                    <FormLabel className='col-span-2 text-left'>
+                      رمز عبور
                     </FormLabel>
                     <FormControl>
                       <PasswordInput
-                        placeholder='e.g., S3cur3P@ssw0rd'
+                        placeholder='مثال: S3cur3P@ssw0rd'
                         className='col-span-4'
                         {...field}
                       />
@@ -291,13 +293,13 @@ export function UsersActionDialog({ currentRow, open, onOpenChange }: Props) {
                 name='confirmPassword'
                 render={({ field }) => (
                   <FormItem className='grid grid-cols-6 items-center space-y-0 gap-x-4 gap-y-1'>
-                    <FormLabel className='col-span-2 text-right'>
-                      Confirm Password
+                    <FormLabel className='col-span-2 text-left'>
+                      تایید رمز عبور
                     </FormLabel>
                     <FormControl>
                       <PasswordInput
                         disabled={!isPasswordTouched}
-                        placeholder='e.g., S3cur3P@ssw0rd'
+                        placeholder='مثال: S3cur3P@ssw0rd'
                         className='col-span-4'
                         {...field}
                       />
@@ -311,7 +313,7 @@ export function UsersActionDialog({ currentRow, open, onOpenChange }: Props) {
         </div>
         <DialogFooter>
           <Button type='submit' form='user-form'>
-            Save changes
+            ذخیره تغییرات
           </Button>
         </DialogFooter>
       </DialogContent>

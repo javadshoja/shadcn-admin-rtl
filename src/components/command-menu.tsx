@@ -1,8 +1,8 @@
 import React from 'react'
 import { useNavigate } from '@tanstack/react-router'
 import {
-  IconArrowRightDashed,
-  IconChevronRight,
+  IconArrowLeftDashed,
+  IconChevronLeft,
   IconDeviceLaptop,
   IconMoon,
   IconSun,
@@ -36,12 +36,12 @@ export function CommandMenu() {
 
   return (
     <CommandDialog modal open={open} onOpenChange={setOpen}>
-      <CommandInput placeholder='Type a command or search...' />
+      <CommandInput placeholder='نوشتن یک دستور یا جستجو...' />
       <CommandList>
         <ScrollArea type='hover' className='h-72 pl-1'>
-          <CommandEmpty>No results found.</CommandEmpty>
+          <CommandEmpty>نتیجه ای یافت نشد.</CommandEmpty>
           {sidebarData.navGroups.map((group) => (
-            <CommandGroup key={group.title} heading={group.title}>
+            <CommandGroup dir='rtl' key={group.title} heading={group.title}>
               {group.items.map((navItem, i) => {
                 if (navItem.url)
                   return (
@@ -53,7 +53,7 @@ export function CommandMenu() {
                       }}
                     >
                       <div className='ml-2 flex h-4 w-4 items-center justify-center'>
-                        <IconArrowRightDashed className='text-muted-foreground/80 size-2' />
+                        <IconArrowLeftDashed className='text-muted-foreground/80 size-2' />
                       </div>
                       {navItem.title}
                     </CommandItem>
@@ -68,26 +68,26 @@ export function CommandMenu() {
                     }}
                   >
                     <div className='ml-2 flex h-4 w-4 items-center justify-center'>
-                      <IconArrowRightDashed className='text-muted-foreground/80 size-2' />
+                      <IconArrowLeftDashed className='text-muted-foreground/80 size-2' />
                     </div>
-                    {navItem.title} <IconChevronRight /> {subItem.title}
+                    {navItem.title} <IconChevronLeft /> {subItem.title}
                   </CommandItem>
                 ))
               })}
             </CommandGroup>
           ))}
           <CommandSeparator />
-          <CommandGroup heading='Theme'>
+          <CommandGroup heading='تم' dir='rtl'>
             <CommandItem onSelect={() => runCommand(() => setTheme('light'))}>
-              <IconSun /> <span>Light</span>
+              <IconSun /> <span>روشن</span>
             </CommandItem>
             <CommandItem onSelect={() => runCommand(() => setTheme('dark'))}>
               <IconMoon className='scale-90' />
-              <span>Dark</span>
+              <span>تاریک</span>
             </CommandItem>
             <CommandItem onSelect={() => runCommand(() => setTheme('system'))}>
               <IconDeviceLaptop />
-              <span>System</span>
+              <span>سیستم</span>
             </CommandItem>
           </CommandGroup>
         </ScrollArea>
